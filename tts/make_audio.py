@@ -32,9 +32,24 @@ def pipe(lang):
 def fname(v, t):
     return hashlib.sha1((v + "|" + t).encode("utf-8")).hexdigest()[:12] + ".mp3"
 
+DIGIT = {"0": "oh", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"}
+TENS = {"2": "twenty", "3": "thirty", "4": "forty", "5": "fifty", "6": "sixty", "7": "seventy", "8": "eighty", "9": "ninety"}
+TEENS = {"10": "ten", "11": "eleven", "12": "twelve", "13": "thirteen", "14": "fourteen", "15": "fifteen", "16": "sixteen", "17": "seventeen", "18": "eighteen", "19": "nineteen"}
+
+def two(d):
+    if d[0] == "0": return "oh " + DIGIT[d[1]]
+    if d in TEENS: return TEENS[d]
+    return TENS[d[0]] + ("" if d[1] == "0" else "-" + DIGIT[d[1]])
+
 def prepare(t):
     m = re.fullmatch(r"([A-D])\.", t)
-    return LETTERS[m.group(1)] + "." if m else t
+    if m:
+        return LETTERS[m.group(1)] + "."
+    # Phone numbers are read digit by digit, as announcers do: 555-0178 -> five five five, oh one seven eight
+    t = re.sub(r"\b(\d{3})-(\d{4})\b", lambda m: " ".join(DIGIT[c] for c in m.group(1)) + ", " + " ".join(DIGIT[c] for c in m.group(2)), t)
+    # Flight numbers in pairs: Flight 372 -> Flight three seventy-two
+    t = re.sub(r"\b(Flight) (\d)(\d\d)\b", lambda m: m.group(1) + " " + DIGIT[m.group(2)] + " " + two(m.group(3)), t)
+    return t
 
 os.makedirs(OUT, exist_ok=True)
 manifest, log, made = {}, [], 0
