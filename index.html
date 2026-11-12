@@ -113,6 +113,8 @@ input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:2p
 .rules li::before{content:"";position:absolute;left:13px;top:17px;width:10px;height:10px;border-radius:999px;background:var(--accent)}
 .rules.ex li::before{background:var(--sky-ink)}
 .rules strong{color:var(--accent)}
+.ftag{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:1px 9px;line-height:1.6;vertical-align:1px}
+.ftag.hot{background:var(--pink);color:var(--pink-ink)} .ftag.warm{background:var(--butter);color:var(--butter-ink)} .ftag.cool{background:var(--sky);color:var(--sky-ink)}
 .best.good{color:var(--good)!important;background:var(--good-bg)!important} .best.weak{color:var(--bad)!important;background:var(--bad-bg)!important}
 .bar{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--accent) 0 8px,color-mix(in srgb, var(--accent) 80%, #fff) 8px 16px);border-radius:999px}
@@ -710,12 +712,13 @@ function homeGrammar(){
     ]),
     resetRow("รีเซ็ตคะแนน และสุ่มลำดับข้อใหม่")
   ]) ];
-  var list = [ h("div",{class:"sechead"},[ h("h2",{text:"หัวข้อ"}), h("span",{class:"muted",text:GSETS.length + " หัวข้อ · " + total + " ข้อ"}) ]) ];
+  var list = [ h("div",{class:"sechead"},[ h("h2",{text:"หัวข้อ"}), h("span",{class:"muted",text:GSETS.length + " หัวข้อ · " + total + " ข้อ"}) ]),
+    h("p",{class:"muted",text:"เรียงจากหัวข้อที่ออกบ่อยและเก็บคะแนนได้มากที่สุดก่อน ทำ 4 หัวข้อแรกให้แม่นก่อน แล้วค่อยไล่ลงไป"}) ];
   GSETS.forEach(function(g, i){
     var best = getBest(g.id), pct = best == null ? null : Math.round(best / g.items.length * 100);
     list.push(h("button",{class:"set", onclick:function(){ S.topic = g; S.view = "lesson"; renderApp(); window.scrollTo(0,0); }},[
       h("span",{class:"num",text:String(i + 1)}),
-      h("span",{class:"grow"},[ h("div",{class:"t",text:g.title}), h("div",{class:"d",text:g.desc}) ]),
+      h("span",{class:"grow"},[ h("div",{class:"t",text:g.title}), h("div",{class:"d"},[ freqTag(g.topic.freq), " " + g.desc ]) ]),
       h("span",{class:"best" + (pct == null ? "" : pct >= 80 ? " good" : " weak"),text: best == null ? "อ่าน →" : best + "/" + g.items.length})
     ]));
   });
@@ -723,12 +726,16 @@ function homeGrammar(){
   out.push(h("section",{class:"sec"},list));
   return out;
 }
+function freqTag(f){
+  var t = f === 3 ? ["ออกบ่อยมาก","hot"] : f === 2 ? ["ออกบ่อย","warm"] : ["เก็บตก","cool"];
+  return h("span",{class:"ftag " + t[1], text:t[0]});
+}
 function renderLesson(){
   var g = S.topic, t = g.topic;
   app.appendChild(h("section",{class:"card lesson"},[
     h("div",{class:"row"},[ h("button",{class:"btn ghost",text:"← หัวข้อแกรมม่า",onclick:function(){ S.view = "home"; renderApp(); }}) ]),
     h("h2",{text:t.title}),
-    h("p",{class:"muted",text:t.sub}),
+    h("p",{class:"muted"},[ freqTag(t.freq), " " + t.sub ]),
     h("h3",{text:"กฎที่ต้องรู้"}),
     h("ul",{class:"rules"}, t.rules.map(function(r){ return h("li",{},[ rich(r) ]); })),
     h("h3",{text:"ตัวอย่าง"}),
