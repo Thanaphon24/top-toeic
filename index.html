@@ -399,6 +399,19 @@ var LETTERS = ["A","B","C","D"];
   SOURCE.push({id:"x7", part:"Part 7", items:i7});
 })();
 
+/* ---------- ชื่อไฟล์เสียงต่อข้อ (P1-01 … P4-10) ต้องตรงกับหน้าบทพูดสำหรับ Speaktor ---------- */
+(function(){
+  ["Part 1","Part 2","Part 3","Part 4"].forEach(function(part){
+    var n = 0, P = part.replace("Part ", "P"), seen = {};
+    SOURCE.filter(function(s){ return s.part === part; }).forEach(function(src){ src.items.forEach(function(it){
+      if (!it.audio) return;
+      var key = JSON.stringify(it.audio);
+      if (!seen[key]){ n++; seen[key] = P + "-" + (n < 10 ? "0" : "") + n; }
+      it.clip = seen[key];
+    }); });
+  });
+})();
+
 /* ---------- สุ่มชุดข้อสอบจากคลัง: เปลี่ยนทุกครั้งที่รีเซ็ตคะแนน ---------- */
 var memSeed = 0;
 function getSeed(){
@@ -799,12 +812,29 @@ function playFiles(files){
   S.speaking = true; renderApp();
   next();
 }
+var CLIPFAIL = {};
+function playClip(it){
+  if (!player){ player = new Audio(); player.preload = "auto"; }
+  if (synth) synth.cancel(); clearTimeout(gapTimer);
+  var id = ++playId;
+  function done(){ if (id !== playId) return; S.speaking = false; if (S.view === "quiz") renderApp(); }
+  player.onended = done;
+  player.onerror = function(){ if (id !== playId) return; CLIPFAIL[it.clip] = true; S.speaking = false; playAudio(); };
+  player.src = "audio/" + it.clip + ".mp3";
+  S.speaking = true; renderApp();
+  var p = player.play();
+  if (p && p.catch) p.catch(function(err){
+    if (id !== playId) return;
+    if (err && err.name === "NotAllowedError"){ S.audioErr = "เบราว์เซอร์ไม่ยอมเล่นเสียง ลองกดปุ่มฟังเสียงอีกครั้ง"; done(); }
+  });
+}
 function playAudio(){
   var it = S.set && S.set.items[S.i];
   if (!it || !it.audio) return;
   S.audioErr = "";
   var files = fileList(steps(it.audio));
   if (files){ if (synth) synth.cancel(); clearTimeout(gapTimer); return playFiles(files); }
+  if (it.clip && !CLIPFAIL[it.clip]) return playClip(it);
   if (!synth) return;
   S.audioErr = "";
   synth.cancel(); clearTimeout(gapTimer);
