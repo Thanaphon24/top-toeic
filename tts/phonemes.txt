@@ -226,3 +226,5 @@ d96174706c14.mp3	am_michael	Good evening, and welcome to the annual employee awa
 44d0287aeaed.mp3	am_michael	Tonight, we're honoring Maria Santos, who has worked in our customer service department for twenty years.	tənˈIt, wɪɹ ˈɑnəɹɪŋ mˈɑɹiə sˈæntOs, hˌu hæz wˈɜɹkt ɪn ˌWəɹ kˈʌstəməɹ sˈɜɹvəs dəpˈɑɹtmənt fɔɹ twˈɛnti jˈɪɹz.
 029bad4f28b7.mp3	am_michael	Maria has trained more than one hundred new employees and has always been a role model for her team.	mˈɑɹiə hæz tɹˈAnd mˈɔɹ ðən wˈʌn hˈʌndɹəd nˈu ˌɛmplˌYˈiz ænd hæz ˈɔlwˌAz bɪn ɐ ɹˈOl mˈɑdᵊl fɔɹ hɜɹ tˈim.
 148f7ded8e67.mp3	am_michael	Please join me in welcoming Maria to the stage.	plˈiz ʤˈYn mˌi ɪn wˈɛlkəmɪŋ mˈɑɹiə tə ðə stˈAʤ.
+e2c9d115512a.mp3	am_michael	Attention, passengers. Flight 372 to Osaka has been delayed due to bad weather.	ətˈɛnʧən, pˈæsᵊnʤəɹz. flˈIt θɹˈi sˈɛvəntitˌu tʊ Osˈɑkə hæz bɪn dəlˈAd dˈu tə bˈæd wˈɛðəɹ.
+e8ab40aadcf4.mp3	am_michael	If you need to reschedule, call us at 555-0178 before 5 P.M. today.	ˌɪf ju nˈid tə ɹiskˈɛʤəl, kˈɔl ˌʌs æt fˈIv fˈIv fˈIv, ˈO wˈʌn sˈɛvən ˈAt bəfˈɔɹ fˈIv pˌiˈɛm tədˈA.
