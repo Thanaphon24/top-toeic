@@ -1,0 +1,35 @@
+name: Generate listening audio
+on:
+  push:
+    branches: [main]
+    paths: ["tts/segments.json", "tts/make_audio.py", ".github/workflows/tts.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: tts
+  cancel-in-progress: false
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+      - name: Python packages
+        run: pip install "kokoro>=0.9.4" soundfile "misaki[en]"
+      - name: Render audio
+        run: python tts/make_audio.py
+      - name: Commit audio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio tts/phonemes.txt
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Generate listening audio with Kokoro TTS"
+          git pull --rebase origin main
+          git push origin HEAD:main
