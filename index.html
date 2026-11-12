@@ -774,9 +774,38 @@ function steps(audio){
   });
   return out;
 }
+/* ไฟล์เสียงที่สร้างไว้ล่วงหน้า (audio/manifest.json) ถ้ามีครบทุกท่อน จะเล่นไฟล์แทนเสียงของเบราว์เซอร์ */
+var MANIFEST = null, player = null;
+function fileList(list){
+  if (!MANIFEST) return null;
+  var out = [];
+  for (var i = 0; i < list.length; i++){ var f = MANIFEST[list[i].v + "|" + list[i].t]; if (!f) return null; out.push({src:"audio/" + f, pause:list[i].pause}); }
+  return out;
+}
+function playFiles(files){
+  if (!player){ player = new Audio(); player.preload = "auto"; }
+  var id = ++playId, k = 0;
+  function done(){ if (id !== playId) return; S.speaking = false; if (S.view === "quiz") renderApp(); }
+  function next(){
+    if (id !== playId) return;
+    if (k >= files.length) return done();
+    var f = files[k++];
+    player.onended = function(){ if (id !== playId) return; gapTimer = setTimeout(next, f.pause); };
+    player.onerror = function(){ if (id !== playId) return; S.audioErr = "โหลดไฟล์เสียงไม่สำเร็จ ลองกดอีกครั้ง"; done(); };
+    player.src = f.src;
+    var p = player.play();
+    if (p && p.catch) p.catch(function(){ if (id !== playId) return; S.audioErr = "เบราว์เซอร์ไม่ยอมเล่นเสียง ลองกดปุ่มฟังเสียงอีกครั้ง"; done(); });
+  }
+  S.speaking = true; renderApp();
+  next();
+}
 function playAudio(){
   var it = S.set && S.set.items[S.i];
-  if (!synth || !it || !it.audio) return;
+  if (!it || !it.audio) return;
+  S.audioErr = "";
+  var files = fileList(steps(it.audio));
+  if (files){ if (synth) synth.cancel(); clearTimeout(gapTimer); return playFiles(files); }
+  if (!synth) return;
   S.audioErr = "";
   synth.cancel(); clearTimeout(gapTimer);
   var id = ++playId, list = steps(it.audio), k = 0;
@@ -798,7 +827,7 @@ function playAudio(){
   S.speaking = true; renderApp();
   next();
 }
-function stopAudio(){ if (synth && S.speaking){ playId++; clearTimeout(gapTimer); synth.cancel(); S.speaking = false; } }
+function stopAudio(){ if (S.speaking){ playId++; clearTimeout(gapTimer); if (synth) synth.cancel(); if (player){ try { player.pause(); } catch(e){} } S.speaking = false; } }
 function secOf(s){ return SECTIONS.filter(function(x){ return x.name === s.part || x.parts.some(function(p){ return p.part === s.part; }); })[0]; }
 function setSecs(s){
   if (s.secs) return s.secs;
@@ -995,6 +1024,11 @@ function renderResult(){
 
 /* ---------- เปิด-ปิดเว็บ: อ่านจากไฟล์ config.json ---------- */
 S.tts = !!synth;
+try {
+  fetch("audio/manifest.json", {cache:"no-cache"}).then(function(r){ return r.ok ? r.json() : null; }).then(function(m){
+    if (m && typeof m === "object"){ MANIFEST = m; S.tts = true; if (S.view === "quiz") renderApp(); }
+  }, function(){});
+} catch(e){}
 if (synth){ try { synth.getVoices(); synth.onvoiceschanged = function(){}; } catch(e){} }
 (function init(){
   function apply(c){
