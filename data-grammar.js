@@ -1,7 +1,7 @@
 /* ติวแกรมม่าเข้มข้น: บทเรียนสั้น + แบบฝึก (แต่งใหม่ทั้งหมด)
    q = [โจทย์, [4 ตัวเลือก], ข้อถูก (0-3), คำอธิบาย] */
 window.GRAMMAR = [
-{id:"pos", freq:3, title:"ชนิดของคำ (Parts of Speech)", sub:"หัวใจของ Part 5 ออกบ่อยที่สุด",
+{id:"pos", tip:["the / a / my ___ หรือ ___ of → คำนาม", "___ + คำนาม หรือ is / was ___ → คำคุณศัพท์", "is ___ V3 หรือขยายกริยา → คำที่ลงท้าย -ly"], freq:3, title:"ชนิดของคำ (Parts of Speech)", sub:"หัวใจของ Part 5 ออกบ่อยที่สุด",
  rules:[
   "หลัง a / an / the / คำแสดงความเป็นเจ้าของ (my, its, the company's) และหลังคำคุณศัพท์ → ต้องเป็น **คำนาม**",
   "หน้าคำนาม หรือหลัง be / become / remain / seem → ต้องเป็น **คำคุณศัพท์**",
@@ -24,7 +24,7 @@ window.GRAMMAR = [
   ["The engineers worked ------- to fix the problem before the deadline.", ["tireless","tirelessly","tiredness","tire"], 1, "ขยายกริยา worked ต้องเป็นกริยาวิเศษณ์ tirelessly (อย่างไม่รู้จักเหนื่อย)"],
   ["Customer ------- is our highest priority.", ["satisfy","satisfied","satisfying","satisfaction"], 3, "Customer satisfaction เป็นคำนามประสมทำหน้าที่ประธาน ต้องใช้คำนาม satisfaction (ความพึงพอใจ)"]
  ]},
-{id:"connect", freq:3, title:"บุพบท vs คำเชื่อม (Prepositions vs Conjunctions)", sub:"ดูว่าหลังช่องว่างเป็นคำนามหรือประโยค",
+{id:"connect", tip:["หลังช่องว่างมี ประธาน + กริยา → คำเชื่อม (although, because, while)", "ไม่มี → บุพบท (despite, because of, during)", "ลงท้ายด้วย of / to (because of, due to) → ตามด้วยคำนามเสมอ"], freq:3, title:"บุพบท vs คำเชื่อม (Prepositions vs Conjunctions)", sub:"ดูว่าหลังช่องว่างเป็นคำนามหรือประโยค",
  rules:[
   "ตามด้วย **คำนาม/V-ing** → บุพบท · ตามด้วย **ประโยค (ประธาน + กริยา)** → คำเชื่อม",
   "แม้ว่า: **despite / in spite of** + นาม · **although / though / even though** + ประโยค",
@@ -48,7 +48,7 @@ window.GRAMMAR = [
   ["------- the contract is signed, the construction work will begin.", ["Once","During","Despite","Due to"], 0, "Once = ทันทีที่ ตามด้วยประโยค"],
   ["The company hired more staff ------- meet the growing demand.", ["so that","in order to","because","although"], 1, "ตามด้วย V1 (meet) ใช้ in order to"]
  ]},
-{id:"tense", freq:3, title:"กาล (Tenses)", sub:"ดูคำบอกเวลาในประโยคให้เป็น",
+{id:"tense", tip:["since / for → have + V3", "ago / last / yesterday → V2 · next / tomorrow → will", "when / if / as soon as พูดถึงอนาคต → V1 ห้ามใช้ will"], freq:3, title:"กาล (Tenses)", sub:"ดูคำบอกเวลาในประโยคให้เป็น",
  rules:[
   "**Present Simple**: ความจริง กิจวัตร ตารางเวลา · every day, usually, always",
   "**Present Continuous**: กำลังทำอยู่ตอนนี้หรือช่วงนี้ · currently, now, at the moment",
@@ -72,7 +72,7 @@ window.GRAMMAR = [
   ["Ms. Lee ------- in Tokyo for five years before she moved to Seoul.", ["has lived","had lived","lives","will live"], 1, "การอยู่โตเกียวเกิดก่อนการย้ายในอดีต (moved) จึงใช้ Past Perfect had lived"],
   ["The number of online orders ------- steadily over the past six months.", ["increases","increased","has increased","will increase"], 2, "over the past six months คือช่วงเวลาที่ต่อเนื่องมาถึงปัจจุบัน ใช้ Present Perfect has increased"]
  ]},
-{id:"passive", freq:3, title:"ประโยค Passive", sub:"ประธานเป็นผู้กระทำหรือผู้ถูกกระทำ",
+{id:"passive", tip:["ถามว่า ประธานทำเองได้ไหม? ทำเองไม่ได้ → be + V3", "เห็น by ตามหลังช่องว่าง → มักเป็น passive", "happen · occur · arrive · take place → ไม่มี passive"], freq:3, title:"ประโยค Passive", sub:"ประธานเป็นผู้กระทำหรือผู้ถูกกระทำ",
  rules:[
   "โครงสร้าง **be + V3** · ประธานเป็นผู้ถูกกระทำ เช่น The report **was written** by Tom.",
   "ถ้าหลังช่องว่างมีกรรมตามมา มักเป็น active · ถ้าไม่มีกรรมและตามด้วย by หรือคำบอกเวลา มักเป็น passive",
@@ -95,7 +95,7 @@ window.GRAMMAR = [
   ["The prices listed in the catalog ------- without notice.", ["may change","may be changed by","may changing","may to change"], 0, "change ใช้แบบไม่มีกรรมได้ (ราคาเปลี่ยนเอง) และหลัง may ใช้ V1 จึงตอบ may change ส่วน be changed by ต้องมีผู้กระทำตาม"],
   ["The documents ------- carefully before they were signed.", ["reviewed","were reviewed","reviewing","have reviewed"], 1, "เอกสารถูกตรวจ ไม่มีกรรมตาม และเป็นอดีต จึงใช้ were reviewed"]
  ]},
-{id:"pronoun", freq:2, title:"สรรพนาม (Pronouns)", sub:"he · him · his · himself",
+{id:"pronoun", tip:["they · them · their · theirs · themselves", "หน้าคำนาม → their · หลังกริยาหรือบุพบท → them", "ไม่มีนามตาม → theirs · by + -self = ด้วยตัวเอง"], freq:2, title:"สรรพนาม (Pronouns)", sub:"he · him · his · himself",
  rules:[
   "**ประธาน**: I he she it we they · **กรรม** (หลังกริยา/บุพบท): me him her it us them",
   "**คุณศัพท์แสดงเจ้าของ** + คำนาม: my his her its our their",
@@ -118,7 +118,7 @@ window.GRAMMAR = [
   ["The board thanked the volunteers for ------- hard work.", ["they","them","their","theirs"], 2, "ก่อนคำนาม hard work ใช้ their"],
   ["Although the idea was Mr. Cho's, the final design was entirely ------- .", ["she","her","hers","herself"], 2, "ไม่มีคำนามตาม หมายถึง แบบของเธอ ใช้ hers"]
  ]},
-{id:"relative", freq:2, title:"คำเชื่อมประโยคขยาย (Relative Pronouns)", sub:"who · which · that · whose · whom · where",
+{id:"relative", tip:["คน → who · สิ่งของ → which", "ตามด้วยคำนาม → whose", "หลังจุลภาค ห้ามใช้ that"], freq:2, title:"คำเชื่อมประโยคขยาย (Relative Pronouns)", sub:"who · which · that · whose · whom · where",
  rules:[
   "**who** = คน ทำหน้าที่ประธาน · **whom** = คน ทำหน้าที่กรรม (มักตามด้วยประธาน + กริยา)",
   "**which** = สิ่งของ · **that** = คนหรือสิ่งของ แต่ใช้หลังจุลภาคไม่ได้ และใช้หลังบุพบทไม่ได้",
@@ -141,7 +141,7 @@ window.GRAMMAR = [
   ["The candidate to ------- we offered the position has accepted.", ["who","whom","which","that"], 1, "หลังบุพบท to และหมายถึงคน ต้องใช้ whom"],
   ["Ms. Rivera is the consultant ------- recommendations helped us cut costs.", ["who","whom","whose","which"], 2, "ตามด้วยคำนาม recommendations ที่เป็นของที่ปรึกษา จึงใช้ whose"]
  ]},
-{id:"gerinf", freq:2, title:"Gerund (V-ing) vs Infinitive (to + V1)", sub:"จำกริยาที่ตามด้วยแบบไหน",
+{id:"gerinf", tip:["หลังบุพบททุกตัว → V-ing (look forward to + V-ing)", "enjoy · avoid · finish · suggest · consider + V-ing", "นอกนั้นส่วนใหญ่ → to V1"], freq:2, title:"Gerund (V-ing) vs Infinitive (to + V1)", sub:"จำกริยาที่ตามด้วยแบบไหน",
  rules:[
   "ตามด้วย **V-ing**: enjoy, avoid, consider, finish, suggest, recommend, mind, postpone, deny, keep, include",
   "ตามด้วย **to + V1**: want, plan, decide, agree, hope, expect, offer, refuse, promise, afford, aim, intend",
@@ -164,7 +164,7 @@ window.GRAMMAR = [
   ["Ms. Gomez suggested ------- the meeting to Thursday.", ["move","to move","moving","moved"], 2, "suggest + V-ing"],
   ["Remember ------- the lights when you leave the office.", ["turning off","to turn off","turn off","turned off"], 1, "remember to do = อย่าลืมทำ (สิ่งที่ยังไม่ได้ทำ)"]
  ]},
-{id:"particip", freq:2, title:"V-ing / V3 ทำหน้าที่คำคุณศัพท์", sub:"interesting หรือ interested · enclosed · having done",
+{id:"particip", tip:["-ing = ตัวการ ทำให้รู้สึก (a boring movie)", "-ed = คนที่รู้สึก หรือของที่ถูกกระทำ (bored people, attached file)"], freq:2, title:"V-ing / V3 ทำหน้าที่คำคุณศัพท์", sub:"interesting หรือ interested · enclosed · having done",
  rules:[
   "**V-ing** = ทำให้เกิดความรู้สึก/เป็นผู้กระทำ: an interesting book · **V3** = ได้รับความรู้สึก/ถูกกระทำ: interested readers",
   "สิ่งของที่ถูกกระทำใช้ **V3**: the **attached** file, the **enclosed** form, **revised** schedule",
@@ -186,7 +186,7 @@ window.GRAMMAR = [
   ["The results of the survey were rather ------- .", ["disappoint","disappointed","disappointing","disappointment"], 2, "ผลสำรวจทำให้ผิดหวัง ใช้ V-ing disappointing"],
   ["Please read the ------- instructions before using the machine.", ["attach","attaching","attached","attachment"], 2, "คำแนะนำที่ถูกแนบมา ใช้ V3 attached"]
  ]},
-{id:"sva", freq:2, title:"ประธานกับกริยาให้สอดคล้อง (Subject–Verb Agreement)", sub:"เอกพจน์หรือพหูพจน์ ดูประธานตัวจริง",
+{id:"sva", tip:["หาประธานตัวจริง ข้ามวลี of … ที่คั่นกลาง", "each · every · one of the … → กริยาเอกพจน์", "A and B → พหูพจน์ · either/neither … or/nor → ตามคำที่อยู่ใกล้"], freq:2, title:"ประธานกับกริยาให้สอดคล้อง (Subject–Verb Agreement)", sub:"เอกพจน์หรือพหูพจน์ ดูประธานตัวจริง",
  rules:[
   "หาประธานตัวจริงก่อน ข้ามวลีบุพบทที่คั่นกลาง: The list **of new products** **is** ready.",
   "each / every / either / neither (ใช้เดี่ยว) / everyone / anything → กริยา **เอกพจน์**",
@@ -210,7 +210,7 @@ window.GRAMMAR = [
   ["Either the director or her assistants ------- the visitors at the airport.", ["meets","meet","is meeting","has met"], 1, "either … or กริยาตามคำที่อยู่ใกล้ คือ assistants (พหูพจน์) จึงใช้ meet"],
   ["The new software and the updated manual ------- available for download.", ["is","are","was","has been"], 1, "A and B เป็นประธานพหูพจน์ ใช้ are"]
  ]},
-{id:"quant", freq:1, title:"คำบอกปริมาณ (Quantifiers)", sub:"many/much · few/little · each/every · other/another",
+{id:"quant", tip:["นับได้ → many · few · นับไม่ได้ → much · little", "each · every · another + นามเอกพจน์", "information · equipment · furniture · advice นับไม่ได้"], freq:1, title:"คำบอกปริมาณ (Quantifiers)", sub:"many/much · few/little · each/every · other/another",
  rules:[
   "นามนับได้: **many, (a) few, a number of, several** · นามนับไม่ได้: **much, (a) little, an amount of**",
   "**few / little** = น้อย (แทบไม่มี) · **a few / a little** = มีอยู่บ้าง",
@@ -233,7 +233,7 @@ window.GRAMMAR = [
   ["------- departments will be moved to the new building.", ["Each","Every","Several","Much"], 2, "departments เป็นพหูพจน์ ใช้ Several ส่วน each/every ต้องตามด้วยเอกพจน์"],
   ["One of the two printers is working, but ------- is broken.", ["another","other","others","the other"], 3, "มีสองเครื่อง เครื่องที่เหลือคือ the other"]
  ]},
-{id:"compare", freq:1, title:"การเปรียบเทียบ (Comparison)", sub:"ขั้นกว่า · ขั้นสุด · as … as",
+{id:"compare", tip:["เห็น than → -er / more", "the + -est / the most → ขั้นสุด", "as ___ as → รูปปกติ · much / far ขยายขั้นกว่า (ห้าม very)"], freq:1, title:"การเปรียบเทียบ (Comparison)", sub:"ขั้นกว่า · ขั้นสุด · as … as",
  rules:[
   "**ขั้นกว่า**: -er / more + adj + **than** · **ขั้นสุด**: the -est / the most + adj (มักมี of, in, ever)",
   "**as + adj/adv รูปปกติ + as** (เท่ากับ) ห้ามใช้ขั้นกว่าระหว่าง as … as",
@@ -256,7 +256,7 @@ window.GRAMMAR = [
   ["The weather was even ------- than the forecast predicted.", ["bad","worse","worst","badly"], 1, "even + ขั้นกว่า และ than จึงตอบ worse"],
   ["It was one of the ------- successful product launches in the company's history.", ["more","most","much","many"], 1, "one of the + ขั้นสุด จึงตอบ most"]
  ]},
-{id:"cond", freq:1, title:"If · Subjunctive · ประโยคกลับหัว", sub:"โครงสร้างระดับสูงที่ทำให้คะแนนขึ้น",
+{id:"cond", tip:["If + V1, will · If + V2, would · If + had V3, would have V3", "Should you … = If you …", "suggest / require / important that + V1 ไม่เติม s"], freq:1, title:"If · Subjunctive · ประโยคกลับหัว", sub:"โครงสร้างระดับสูงที่ทำให้คะแนนขึ้น",
  rules:[
   "**If + Present, will + V1** (เป็นไปได้จริง)",
   "**If + V2, would + V1** (สมมุติปัจจุบัน) · **If + had V3, would have V3** (สมมุติอดีต)",

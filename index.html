@@ -116,6 +116,24 @@ input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:2p
 .ftag{display:inline-block;font-size:12px;font-weight:800;border-radius:999px;padding:1px 9px;line-height:1.6;vertical-align:1px}
 .ftag.hot{background:var(--pink);color:var(--pink-ink)} .ftag.warm{background:var(--butter);color:var(--butter-ink)} .ftag.cool{background:var(--sky);color:var(--sky-ink)}
 .best.good{color:var(--good)!important;background:var(--good-bg)!important} .best.weak{color:var(--bad)!important;background:var(--bad-bg)!important}
+.tipbox{background:var(--butter);color:var(--ink);border-radius:16px;padding:12px 14px;border:2px dashed color-mix(in srgb, var(--butter-ink) 35%, transparent)}
+.tipbox .tiphead{font-family:var(--display);font-weight:700;color:var(--butter-ink);font-size:15px}
+.tipbox ul{margin:4px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:2px}
+.tipbox li{font-weight:600}
+.exp .tipbox{margin-top:4px}
+.head2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.pill.due{color:var(--accent);background:var(--accent-soft)}
+.card.review{border-color:var(--sky)}
+.linkbtn{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;font-size:14px}
+.flash{border-radius:20px;padding:20px;min-height:220px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.flash.front{background:var(--sky)}
+.flash.back{background:var(--mint)}
+.flash .q{font-size:20px}
+.flash .chips{display:flex;flex-wrap:wrap;gap:8px}
+.flash .chip{background:var(--card);border-radius:999px;padding:4px 12px;font-weight:600}
+.flash .ans{display:flex;align-items:center;gap:10px;font-size:20px}
+.flash .ans .b{font-family:var(--num);font-weight:900;background:var(--good);color:#fff;border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+@media (prefers-reduced-motion:no-preference){.flash{animation:pop .25s ease-out}@keyframes pop{from{transform:scale(.97);opacity:.6}}}
 .bar{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--accent) 0 8px,color-mix(in srgb, var(--accent) 80%, #fff) 8px 16px);border-radius:999px}
 .passage{background:var(--paper);border:2px dashed var(--line);border-radius:16px;padding:14px;white-space:pre-wrap;font-size:15px;line-height:1.65}
@@ -572,6 +590,7 @@ function setBest(id, n){ try { var b = JSON.parse(localStorage.getItem("toeic-be
 /* ---------- สถานะ ---------- */
 var S = { access:"loading", isOwner:false, dbReady:false, message:"", saving:false, adminErr:"",
           tts:null, speaking:false, showScript:false, audioErr:"", confirmReset:false,
+          flash:null, confirmClearReview:false,
           timed:false, timeUp:false, deadline:0, tally:{}, mode:"practice", answers:[], confirmSubmit:false, unanswered:0,
           tab:(function(){ try { return localStorage.getItem("toeic-tab") || "exam"; } catch(e){ return "exam"; } })(), topic:null,
           view:"home", set:null, i:0, picked:null, wrong:[], correct:0 };
@@ -625,6 +644,7 @@ function renderApp(){
   if (S.view === "home") return renderHome();
   if (S.view === "setup") return renderSetup();
   if (S.view === "lesson") return renderLesson();
+  if (S.view === "flash") return renderFlash();
   if (S.view === "quiz") return renderQuiz();
   renderResult();
 }
@@ -753,7 +773,7 @@ function examButton(fs, sub, cls){
   ]);
 }
 function homePractice(){
-  var out = [ scoreCard(), h("p",{text:"ฝึกทีละ Part ตอบแล้วเฉลยพร้อมคำอธิบายภาษาไทยทันที"}) ];
+  var out = [ scoreCard(), reviewCard(), h("p",{text:"ฝึกทีละ Part ตอบแล้วเฉลยพร้อมคำอธิบายภาษาไทยทันที"}) ];
   SECTIONS.forEach(function(sec){
     var body = [ h("div",{class:"sechead"},[ h("h2",{text:sec.name}), h("span",{class:"muted",text:sec.sub}) ]) ];
     sec.parts.forEach(function(p){
@@ -779,6 +799,10 @@ function homeGrammar(){
       h("div",{class:"sc"},[ h("div",{class:"muted",text:"ความแม่นยำ"}), h("div",{class:"scn"},[ done ? Math.round(right / done * 100) + "%" : "–" ]), h("div",{class:"muted",text: done ? "ถูก " + right + " จาก " + done + " ข้อ" : "ยังไม่ได้ทำ"}) ])
     ]),
     resetRow("รีเซ็ตคะแนน และสุ่มลำดับข้อใหม่")
+  ]), reviewCard(), h("section",{class:"card"},[
+    h("div",{class:"head2"},[ h("h2",{text:"บัตรคำแกรมม่า"}), h("span",{class:"muted",text:total + " ใบ"}) ]),
+    h("p",{class:"muted",text:"ด้านหน้าเป็นโจทย์ พลิกแล้วเห็นเฉลยพร้อมสูตรจำ ใบที่ยังจำไม่ได้จะถูกส่งไปทวนอัตโนมัติ เหมาะเปิดทวนในมือถือตอนว่าง"}),
+    h("div",{class:"row"},[ h("button",{class:"btn",text:"เปิดบัตรคำทุกหัวข้อ",onclick:function(){ var all = []; GSETS.forEach(function(g){ all = all.concat(g.items); }); openFlash(all, "ทุกหัวข้อ"); }}) ])
   ]) ];
   var list = [ h("div",{class:"sechead"},[ h("h2",{text:"หัวข้อ"}), h("span",{class:"muted",text:GSETS.length + " หัวข้อ · " + total + " ข้อ"}) ]),
     h("p",{class:"muted",text:"เรียงจากหัวข้อที่ออกบ่อยและเก็บคะแนนได้มากที่สุดก่อน ทำ 4 หัวข้อแรกให้แม่นก่อน แล้วค่อยไล่ลงไป"}) ];
@@ -804,12 +828,155 @@ function renderLesson(){
     h("div",{class:"row"},[ h("button",{class:"btn ghost",text:"← หัวข้อแกรมม่า",onclick:function(){ S.view = "home"; renderApp(); }}) ]),
     h("h2",{text:t.title}),
     h("p",{class:"muted"},[ freqTag(t.freq), " " + t.sub ]),
+    tipBox(t),
     h("h3",{text:"กฎที่ต้องรู้"}),
     h("ul",{class:"rules"}, t.rules.map(function(r){ return h("li",{},[ rich(r) ]); })),
     h("h3",{text:"ตัวอย่าง"}),
     h("ul",{class:"rules ex"}, t.ex.map(function(r){ return h("li",{},[ rich(r) ]); })),
-    h("div",{class:"row"},[ h("button",{class:"btn",text:"เริ่มฝึก " + g.items.length + " ข้อ",onclick:function(){ start(g, false); }}) ])
+    h("div",{class:"row"},[
+      h("button",{class:"btn",text:"เริ่มฝึก " + g.items.length + " ข้อ",onclick:function(){ start(g, false); }}),
+      h("button",{class:"btn ghost",text:"บัตรคำหัวข้อนี้",onclick:function(){ openFlash(g.items, t.title); }})
+    ])
   ]));
+}
+function tipBox(t){
+  if (!t || !t.tip) return null;
+  return h("div",{class:"tipbox"},[
+    h("div",{class:"tiphead",text:"สูตรจำ"}),
+    h("ul",{}, t.tip.map(function(x){ return h("li",{text:x}); }))
+  ]);
+}
+function topicOf(it){ return it && it._topic ? (window.GRAMMAR || []).filter(function(t){ return t.id === it._topic; })[0] : null; }
+
+/* ---------- ทวนข้อที่ผิด (ทวนซ้ำแบบเว้นระยะ: วันนี้ → 1 วัน → 3 วัน → 7 วัน → จำได้แล้ว) ---------- */
+var DAY = 864e5, GAPS = [0, 0, 1, 3, 7];
+function qkey(it){ return [(it.p || "").slice(0, 40), (it.audio && it.audio[0] ? it.audio[0].t : "").slice(0, 40), it.q, it.o[it.a]].join("|"); }
+var ITEM_INDEX = null;
+function itemIndex(){
+  if (ITEM_INDEX) return ITEM_INDEX;
+  ITEM_INDEX = {};
+  SOURCE.forEach(function(src){ src.items.forEach(function(it){
+    var c = {}; for (var k in it) c[k] = it[k];
+    c._part = src.part; c._sid = "review";
+    ITEM_INDEX[qkey(c)] = c;
+  }); });
+  (window.GRAMMAR || []).forEach(function(t){ t.q.forEach(function(r){
+    var c = {q:r[0], o:r[1].slice(), a:r[2], e:r[3], _part:"แกรมม่า · " + t.title.split(" (")[0], _topic:t.id, _sid:"review"};
+    ITEM_INDEX[qkey(c)] = c;
+  }); });
+  return ITEM_INDEX;
+}
+function loadR(){ try { return JSON.parse(localStorage.getItem("toeic-review") || "{}"); } catch(e){ return {}; } }
+function saveR(R){ try { localStorage.setItem("toeic-review", JSON.stringify(R)); } catch(e){} }
+function markResult(it, ok){
+  if (!it || !it.o) return;
+  var k = qkey(it), R = loadR(), now = Date.now();
+  if (!ok){ R[k] = {b:1, d:now}; }
+  else if (R[k] && R[k].d <= now){
+    var nb = R[k].b + 1;
+    if (nb >= GAPS.length) delete R[k]; else R[k] = {b:nb, d:now + GAPS[nb] * DAY};
+  }
+  saveR(R);
+}
+function reviewStats(){
+  var R = loadR(), idx = itemIndex(), now = Date.now(), due = [], total = 0, next = null;
+  for (var k in R){
+    if (!idx[k]) continue;
+    total++;
+    if (R[k].d <= now) due.push(k); else if (next == null || R[k].d < next) next = R[k].d;
+  }
+  return {due:due, total:total, next:next};
+}
+function startReview(){
+  var st = reviewStats(), idx = itemIndex();
+  var keys = st.due.slice().sort(function(){ return Math.random() - 0.5; }).slice(0, 20);
+  var items = keys.map(function(k){ var c = {}, o = idx[k]; for (var x in o) c[x] = o[x]; return c; });
+  if (!items.length) return;
+  start({id:"review", part:"ทวนข้อที่ผิด", title:"ทวนข้อที่ผิด", desc:"", items:items, review:true}, false);
+}
+function dayText(ts){
+  var d = Math.ceil((ts - Date.now()) / DAY);
+  return d <= 1 ? "พรุ่งนี้" : "อีก " + d + " วัน";
+}
+function reviewCard(){
+  var st = reviewStats();
+  var kids = [
+    h("div",{class:"head2"},[ h("h2",{text:"ทวนข้อที่ผิด"}), h("span",{class:"pill due",text: st.due.length + " ข้อรอทวน"}) ]),
+    h("p",{class:"muted",text: st.total
+      ? "ข้อที่เคยตอบผิดจะกลับมาให้ทำซ้ำ ตอบถูกแล้วจะเว้นไป 1 วัน 3 วัน และ 7 วัน ถูกครบจึงถือว่าจำได้ ตอนนี้อยู่ในรายการ " + st.total + " ข้อ"
+      : "ยังไม่มีข้อที่ต้องทวน ข้อที่ตอบผิดในทุกโหมดจะถูกเก็บไว้ที่นี่อัตโนมัติ"})
+  ];
+  var row = [ h("button",{class:"btn",text: st.due.length ? "เริ่มทวน " + Math.min(20, st.due.length) + " ข้อ" : "วันนี้ทวนครบแล้ว",disabled:!st.due.length,onclick:startReview}) ];
+  if (!st.due.length && st.next) row.push(h("span",{class:"muted",text:"รอบถัดไป: " + dayText(st.next)}));
+  kids.push(h("div",{class:"row"},row));
+  if (st.total){
+    kids.push(S.confirmClearReview
+      ? h("div",{class:"row"},[ h("span",{text:"ล้างรายการทวนทั้งหมด?"}),
+          h("button",{class:"btn danger",text:"ล้าง",onclick:function(){ saveR({}); S.confirmClearReview = false; renderApp(); }}),
+          h("button",{class:"btn ghost",text:"ยกเลิก",onclick:function(){ S.confirmClearReview = false; renderApp(); }}) ])
+      : h("div",{class:"row"},[ h("button",{class:"linkbtn",text:"ล้างรายการทวน",onclick:function(){ S.confirmClearReview = true; renderApp(); }}) ]));
+  }
+  return h("section",{class:"card review"},kids);
+}
+
+/* ---------- บัตรคำ ---------- */
+function openFlash(items, label){
+  var deck = items.map(function(it){ var c = {}; for (var k in it) c[k] = it[k]; return c; }).sort(function(){ return Math.random() - 0.5; });
+  stopTimer(); stopAudio();
+  S.flash = {deck:deck, i:0, flip:false, known:0, again:0, label:label};
+  S.view = "flash"; renderApp(); window.scrollTo(0,0);
+}
+function flashMark(ok){
+  var F = S.flash, it = F.deck[F.i];
+  markResult(it, ok);
+  if (ok) F.known++; else F.again++;
+  F.i++; F.flip = false; renderApp();
+}
+function renderFlash(){
+  var F = S.flash, n = F.deck.length;
+  var back = h("button",{class:"btn ghost",text:"← แกรมม่า",onclick:function(){ S.view = "home"; renderApp(); }});
+  if (F.i >= n){
+    var st = reviewStats();
+    app.appendChild(h("section",{class:"card"},[
+      h("div",{class:"row"},[ back ]),
+      h("h2",{text:"ครบทั้งชุดแล้ว"}),
+      h("div",{class:"scgrid g2"},[
+        h("div",{class:"sc"},[ h("div",{class:"muted",text:"จำได้"}), h("div",{class:"scn",text:String(F.known)}) ]),
+        h("div",{class:"sc"},[ h("div",{class:"muted",text:"ยังไม่ได้"}), h("div",{class:"scn",text:String(F.again)}) ])
+      ]),
+      h("p",{text: F.again ? "บัตรที่ยังไม่ได้ ถูกส่งไปที่ ทวนข้อที่ผิด แล้ว" : "เยี่ยมมาก จำได้ทั้งชุด"}),
+      h("div",{class:"row"},[
+        st.due.length ? h("button",{class:"btn",text:"ทวนข้อที่ผิดตอนนี้ (" + Math.min(20, st.due.length) + ")",onclick:startReview}) : null,
+        h("button",{class:"btn ghost",text:"เล่นบัตรชุดนี้อีกรอบ",onclick:function(){ openFlash(F.deck, F.label); }})
+      ])
+    ]));
+    return;
+  }
+  var it = F.deck[F.i], t = topicOf(it);
+  var face = F.flip
+    ? h("div",{class:"flash back"},[
+        h("div",{class:"ans"},[ h("span",{class:"b",text:LETTERS[it.a]}), h("strong",{text:it.o[it.a]}) ]),
+        h("p",{text:it.e}),
+        tipBox(t)
+      ])
+    : h("div",{class:"flash front"},[
+        h("span",{class:"muted",text:it._part || ""}),
+        h("p",{class:"q",text:it.q}),
+        h("div",{class:"chips"}, it.o.map(function(o, i){ return h("span",{class:"chip"},[ h("b",{text:LETTERS[i] + " "}), o ]); })),
+        h("p",{class:"muted",text:"คิดคำตอบในใจก่อน แล้วกดพลิกบัตร"})
+      ]);
+  app.appendChild(h("section",{class:"card"},[
+    h("div",{class:"row"},[ back, h("span",{class:"muted",text:"บัตรคำ · " + F.label + " · ใบที่ " + (F.i + 1) + " จาก " + n}) ]),
+    h("div",{class:"bar"},[ h("i",{style:"width:" + Math.round(F.i / n * 100) + "%"}) ]),
+    face,
+    F.flip
+      ? h("div",{class:"row"},[
+          h("button",{class:"btn",id:"fk",text:"จำได้แล้ว ✓",onclick:function(){ flashMark(true); }}),
+          h("button",{class:"btn ghost",text:"ยังไม่ได้ ↻ ทวนทีหลัง",onclick:function(){ flashMark(false); }})
+        ])
+      : h("div",{class:"row"},[ h("button",{class:"btn",id:"fk",text:"พลิกดูเฉลย",onclick:function(){ F.flip = true; renderApp(); }}) ])
+  ]));
+  var b = document.getElementById("fk"); if (b) b.focus({preventScroll:true});
 }
 var synth = (typeof window.speechSynthesis !== "undefined" && typeof window.SpeechSynthesisUtterance !== "undefined") ? window.speechSynthesis : null;
 var FEMALE = /aria|jenny|ava|emma|michelle|samantha|zira|libby|sonia|karen|moira|tessa|serena|allison|susan|female|woman|google us english/i;
@@ -964,13 +1131,13 @@ function finish(){
     S.correct = 0; S.wrong = []; S.tally = {}; S.unanswered = 0;
     S.set.items.forEach(function(it, i){
       var a = S.answers[i];
-      if (a == null) S.unanswered++;
+      if (a == null) S.unanswered++; else markResult(it, a === it.a);
       if (a === it.a){ S.correct++; S.tally[it._sid] = (S.tally[it._sid] || 0) + 1; } else S.wrong.push(i);
     });
   }
   var ids = {};
   S.set.items.forEach(function(it){ ids[it._sid] = true; });
-  for (var id in ids) setBest(id, S.tally[id] || 0);
+  if (!S.set.review) for (var id in ids) setBest(id, S.tally[id] || 0);
   S.view = "result"; renderApp(); window.scrollTo(0,0);
 }
 function renderSetup(){
@@ -1031,7 +1198,9 @@ function renderQuiz(){
     var ok = S.picked === it.a;
     kids.push(h("div",{class:"exp"},[
       h("div",{class:"v " + (ok?"ok":"no"), text: ok ? "ถูกต้อง" : "ยังไม่ถูก คำตอบคือ (" + LETTERS[it.a] + ") " + it.o[it.a]}),
-      h("p",{text:it.e})
+      h("p",{text:it.e}),
+      !ok ? tipBox(topicOf(it)) : null,
+      !ok ? h("p",{class:"muted",text:"เก็บข้อนี้ไว้ใน ทวนข้อที่ผิด แล้ว"}) : null
     ]));
     kids.push(h("button",{class:"btn", id:"next", text: S.i + 1 < s.items.length ? "ข้อต่อไป" : "ดูผลคะแนน", onclick:next}));
   }
@@ -1062,6 +1231,7 @@ function pick(idx){
   if (S.mode === "exam"){ S.answers[S.i] = idx; S.confirmSubmit = false; renderApp(); return; }
   stopAudio();
   S.picked = idx;
+  markResult(it, idx === it.a);
   if (idx === it.a){ S.correct++; S.tally[it._sid] = (S.tally[it._sid] || 0) + 1; } else S.wrong.push(S.i);
   renderApp();
 }
@@ -1096,6 +1266,10 @@ function renderResult(){
     });
     if (both === 2) cells.push(h("div",{class:"sc"},[ h("div",{class:"muted",text:"รวม"}), h("div",{class:"scn"},[ "≈" + sum, h("small",{text:" /990"}) ]), h("div",{class:"muted",text:"คะแนนรอบนี้"}) ]));
     kids.push(h("div",{class:"scgrid" + (cells.length === 1 ? " g1" : "")},cells));
+  } else if (s.review){
+    var st = reviewStats();
+    kids.push(h("p",{text:"ข้อที่ตอบถูกจะเว้นระยะก่อนกลับมาทวนอีก (1, 3, 7 วัน) ข้อที่ผิดจะกลับมาให้ทวนอีกครั้ง"}));
+    if (st.due.length) kids.push(h("button",{class:"btn",text:"ทวนต่ออีก " + Math.min(20, st.due.length) + " ข้อ",onclick:startReview}));
   } else if (!s.grammar){
     var sec = secOf(s), r = sec ? sectionScore(sec) : null;
     if (r && r.score != null) kids.push(h("p",{},[ h("strong",{text:"คะแนน " + sec.name + " โดยประมาณ ≈" + r.score + " / 495"}), h("span",{class:"muted",text:" (จาก " + r.n + " ข้อที่ทำแล้ว)"}) ]));
@@ -1120,7 +1294,8 @@ function renderResult(){
     ]));
   });
   kids.push(h("div",{class:"row"},[
-    h("button",{class:"btn",text:"ทำชุดนี้อีกครั้ง",onclick:function(){ if (s.grammar && !s.mix) start(s, false); else openSetup(s); }}),
+    s.review ? null : h("button",{class:"btn",text:"ทำชุดนี้อีกครั้ง",onclick:function(){ if (s.grammar && !s.mix) start(s, false); else openSetup(s); }}),
+    s.grammar && !s.mix ? h("button",{class:"btn ghost",text:"บัตรคำหัวข้อนี้",onclick:function(){ openFlash(s.items, s.topic.title); }}) : null,
     s.grammar && !s.mix ? h("button",{class:"btn ghost",text:"อ่านกฎอีกครั้ง",onclick:function(){ S.topic = s; S.view = "lesson"; renderApp(); window.scrollTo(0,0); }}) : null,
     h("button",{class:"btn ghost",text:"กลับหน้าหลัก",onclick:function(){ S.view="home"; renderApp(); window.scrollTo(0,0); }})
   ]));
