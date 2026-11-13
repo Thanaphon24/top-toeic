@@ -171,6 +171,7 @@ footer.foot{display:flex;flex-direction:column;align-items:center;gap:6px;text-a
 <script src="data-listening.js"></script>
 <script src="data-reading.js"></script>
 <script src="data-grammar.js"></script>
+<script src="data-more.js"></script>
 <script>
 /* ---------- คลังข้อสอบ ---------- */
 var P6A = "To: All Staff\nFrom: Facilities Department\nSubject: Elevator Maintenance\n\nPlease be advised that the main elevator in Building A will be out of service on Saturday, June 14, for routine maintenance. The work is expected to ---(1)--- approximately six hours. During this time, employees should use the stairs or the service elevator located near the loading dock. ---(2)---. We apologize for any ---(3)--- this may cause and appreciate your cooperation. If you have any questions, please ---(4)--- the Facilities Department at extension 204.";
@@ -399,6 +400,31 @@ var LETTERS = ["A","B","C","D"];
   var i7 = [];
   (X.p7 || []).forEach(function(c){ c.q.forEach(function(r){ i7.push(mk(r, {p:c.p})); }); });
   SOURCE.push({id:"x7", part:"Part 7", items:i7});
+
+  /* คลังชุดที่ 2 (data-more.js) */
+  var Y = window.EXTRA2 || {};
+  SOURCE.push({id:"y5", part:"Part 5", items:(Y.p5 || []).map(function(r){ return mk(r, {}); })});
+  var y6 = []; (Y.p6 || []).forEach(function(c){ c.q.forEach(function(r){ y6.push(mk(r, {p:c.p})); }); });
+  SOURCE.push({id:"y6", part:"Part 6", items:y6});
+  var y7 = []; (Y.p7 || []).forEach(function(c){ c.q.forEach(function(r){ y7.push(mk(r, {p:c.p})); }); });
+  SOURCE.push({id:"y7", part:"Part 7", items:y7});
+  SOURCE.push({id:"y2", part:"Part 2", items:(Y.p2 || []).map(function(r){
+    return {spoken:true, q:"เลือกคำตอบที่เหมาะกับคำถามที่ได้ยิน",
+      audio:[{t:r[0], v:"buttery"}].concat(r[1].map(function(o, i){ return {t:LETTERS[i] + ". " + o, v:"airy"}; })),
+      o:r[1], a:r[2], e:r[3]};
+  })});
+  var y3 = [];
+  (Y.p3 || []).forEach(function(c, ci){
+    var audio = c.l.map(function(l){ return {t:l[1], v: l[0] === "W" ? "airy" : "rounded", s: l[0] === "W" ? "Woman" : "Man"}; });
+    c.q.forEach(function(r){ y3.push(mk(r, {g:"d" + ci, audio:audio})); });
+  });
+  SOURCE.push({id:"y3", part:"Part 3", items:y3});
+  var y4 = [];
+  (Y.p4 || []).forEach(function(c, ci){
+    var audio = [{t:c.t, v:"buttery"}];
+    c.q.forEach(function(r){ y4.push(mk(r, {g:"u" + ci, audio:audio})); });
+  });
+  SOURCE.push({id:"y4", part:"Part 4", items:y4});
 })();
 
 /* ---------- ชื่อไฟล์เสียงต่อข้อ (P1-01 … P4-10) ต้องตรงกับหน้าบทพูดสำหรับ Speaktor ---------- */
@@ -439,29 +465,63 @@ function buildSets(){
   var seed = getSeed();
   var rnd = function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
   function pool(part){ var out = []; SOURCE.forEach(function(s){ if (s.part === part) out = out.concat(s.items); }); return out; }
-  function grouped(part){
+  /* สลับลำดับตัวเลือก A–D ทุกครั้งที่สุ่ม (ทำสำเนา ไม่แก้คลังเดิม)
+     คำอธิบายที่อ้างตัวอักษร เช่น (B) จะถูกแทนด้วยข้อความของตัวเลือกนั้น ข้อที่มีเสียงอ่านตัวเลือกจะเรียงเสียงใหม่ตามลำดับใหม่ */
+  function shuffleOpts(it){
+    var n = it.o.length, order = shuffled([0,1,2,3].slice(0, n), rnd), c = {};
+    for (var k in it) c[k] = it[k];
+    c.o = order.map(function(i){ return it.o[i]; });
+    c.a = order.indexOf(it.a);
+    c.e = String(it.e).replace(/\(([A-D])\)/g, function(m, L){ var i = LETTERS.indexOf(L); return i >= 0 && i < n ? "“" + it.o[i] + "”" : m; });
+    var moved = order.some(function(v, i){ return v !== i; });
+    if (it.audio && moved){
+      var first = -1, voice = "glassy";
+      it.audio.forEach(function(l, i){ if (/^[A-D]\.\s/.test(l.t)){ if (first < 0){ first = i; voice = l.v; } } });
+      if (first >= 0){
+        var rest = it.audio.filter(function(l){ return !/^[A-D]\.\s/.test(l.t); });
+        var lines = c.o.map(function(o, i){ return {t:LETTERS[i] + ". " + o, v:voice}; });
+        c.audio = rest.slice(0, first).concat(lines, rest.slice(first));
+        delete c.clip;
+      }
+    }
+    return c;
+  }
+  /* แบ่งข้อที่ใช้เนื้อเรื่องหรือบทสนทนาเดียวกันเป็นกลุ่ม แล้วเลือกกลุ่มให้รวมได้จำนวนข้อพอดี */
+  function groupsOf(part){
     var groups = [], keys = [];
     pool(part).forEach(function(it){
       var key = it.g || it.p, k = key ? keys.indexOf(key) : -1;
       if (k < 0){ keys.push(key || {}); groups.push([it]); } else groups[k].push(it);
     });
-    var out = [];
-    shuffled(groups, rnd).forEach(function(g){ out = out.concat(g); });
-    return out;
+    return groups;
   }
+  function pickGroups(part, target){
+    var groups = groupsOf(part), best = null;
+    for (var tries = 0; tries < 300; tries++){
+      var order = shuffled(groups, rnd), picked = [], sum = 0;
+      order.forEach(function(g){ if (sum + g.length <= target){ picked.push(g); sum += g.length; } });
+      if (!best || Math.abs(target - sum) < Math.abs(target - best.sum)) best = {picked:picked, sum:sum};
+      if (sum === target) break;
+    }
+    var out = [];
+    best.picked.forEach(function(g){ out = out.concat(g); });
+    return out.map(shuffleOpts);
+  }
+  function draw(part, n){ return shuffled(pool(part), rnd).slice(0, n).map(shuffleOpts); }
   function mk(id, part, desc, items){
     items.forEach(function(it){ it._sid = id; it._part = part; });
     return {id:id, part:part, title:"ชุดฝึก " + part, desc:desc, items:items};
   }
-  var n5 = pool("Part 5").length;
+  function bank(part){ return pool(part).length; }
+  function stories(part){ return groupsOf(part).length; }
   var sets = [
-    mk("l1", "Part 1", "สุ่ม 6 ภาพจากคลัง " + pool("Part 1").length + " ภาพ", shuffled(pool("Part 1"), rnd).slice(0, 6)),
-    mk("l2", "Part 2", "ฟังคำถามและ 3 คำตอบ", shuffled(pool("Part 2"), rnd)),
-    mk("l3", "Part 3", "ฟังบทสนทนา ตอบเรื่องละ 3 ข้อ", grouped("Part 3")),
-    mk("l4", "Part 4", "ฟังประกาศหรือข้อความ ตอบเรื่องละ 3 ข้อ", grouped("Part 4")),
-    mk("p5", "Part 5", "สุ่ม 30 ข้อจากคลัง " + n5 + " ข้อ", shuffled(pool("Part 5"), rnd).slice(0, 30)),
-    mk("p6", "Part 6", "4 เรื่อง เรื่องละ 4 ข้อ", grouped("Part 6")),
-    mk("p7", "Part 7", "ประกาศ อีเมล บทความ และเนื้อเรื่องคู่", grouped("Part 7"))
+    mk("l1", "Part 1", "สุ่ม 6 ภาพจากคลัง " + bank("Part 1") + " ภาพ", draw("Part 1", 6)),
+    mk("l2", "Part 2", "สุ่ม 25 ข้อจากคลัง " + bank("Part 2") + " ข้อ", draw("Part 2", 25)),
+    mk("l3", "Part 3", "สุ่ม 13 บทสนทนาจากคลัง " + stories("Part 3") + " เรื่อง", pickGroups("Part 3", 39)),
+    mk("l4", "Part 4", "สุ่ม 10 บทพูดจากคลัง " + stories("Part 4") + " เรื่อง", pickGroups("Part 4", 30)),
+    mk("p5", "Part 5", "สุ่ม 30 ข้อจากคลัง " + bank("Part 5") + " ข้อ", draw("Part 5", 30)),
+    mk("p6", "Part 6", "สุ่ม 4 เรื่องจากคลัง " + stories("Part 6") + " เรื่อง", pickGroups("Part 6", 16)),
+    mk("p7", "Part 7", "สุ่ม 54 ข้อจากคลัง " + bank("Part 7") + " ข้อ (" + stories("Part 7") + " เรื่อง)", pickGroups("Part 7", 54))
   ];
   function full(name, ids, mins){
     var items = [];
