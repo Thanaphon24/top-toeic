@@ -228,3 +228,190 @@ d96174706c14.mp3	am_michael	Good evening, and welcome to the annual employee awa
 148f7ded8e67.mp3	am_michael	Please join me in welcoming Maria to the stage.	plˈiz ʤˈYn mˌi ɪn wˈɛlkəmɪŋ mˈɑɹiə tə ðə stˈAʤ.
 e2c9d115512a.mp3	am_michael	Attention, passengers. Flight 372 to Osaka has been delayed due to bad weather.	ətˈɛnʧən, pˈæsᵊnʤəɹz. flˈIt θɹˈi sˈɛvəntitˌu tʊ Osˈɑkə hæz bɪn dəlˈAd dˈu tə bˈæd wˈɛðəɹ.
 e8ab40aadcf4.mp3	am_michael	If you need to reschedule, call us at 555-0178 before 5 P.M. today.	ˌɪf ju nˈid tə ɹiskˈɛʤəl, kˈɔl ˌʌs æt fˈIv fˈIv fˈIv, ˈO wˈʌn sˈɛvən ˈAt bəfˈɔɹ fˈIv pˌiˈɛm tədˈA.
+706eaa81c0ab.mp3	am_michael	Where should I put these files?	wˌɛɹ ʃˌʊd ˌI pˌʊt ðiz fˈIlz?
+87dc3b732b65.mp3	af_heart	On the shelf next to the printer.	ˌɔn ðə ʃˈɛlf nˈɛkst tə ðə pɹˈɪntəɹ.
+8f9e6d6c8cbc.mp3	af_heart	Yes, I filed them.	jˈɛs, ˌI fˈIld ðˌɛm.
+62be99c0de9c.mp3	af_heart	By tomorrow afternoon.	bˌI təmˈɑɹO ˌæftəɹnˈun.
+5838481fcd55.mp3	am_michael	When does the training session begin?	wˌɛn dˈʌz ðə tɹˈAnɪŋ sˈɛʃən bəɡˈɪn?
+5e2a95dca6cb.mp3	af_heart	In Room 4.	ɪn ɹˈum fˈɔɹ.
+a549f5258879.mp3	af_heart	At ten thirty.	ˌæt tˈɛn θˈɜɹTi.
+085752faf408.mp3	af_heart	Ms. Chen is leading it.	mˈɪz ʧˈɛn ɪz lˈidɪŋ ɪt.
+7312cc28a169.mp3	am_michael	Who's going to pick up the clients from the airport?	hˌuz ɡˈOɪŋ tə pˈɪk ˌʌp ðə klˈIənts fɹʌm ði ˈɛɹpˌɔɹt?
+490d50eca76b.mp3	af_heart	Flight 205.	flˈIt tˈu ˈO fˈIv.
+24f79b35a76b.mp3	af_heart	I think Daniel is.	ˌI θˈɪŋk dˈænjəl ɪz.
+b18662a005bf.mp3	af_heart	At the arrivals gate.	ˌæt ði əɹˈIvəlz ɡˈAt.
+4f83a8e9a7ce.mp3	am_michael	Why is the parking lot closed today?	wˌI ɪz ðə pˈɑɹkɪŋ lˈɑt klˈOzd tədˈA?
+e3b31bf7b94a.mp3	af_heart	They're repaving it.	ðˌɛɹ ɹᵻpˈAvɪŋ ɪt.
+afe1e8fbc423.mp3	af_heart	Near the main entrance.	nˌɪɹ ðə mˈAn ˈɛntɹəns.
+4440e40f981e.mp3	af_heart	Yes, it's open now.	jˈɛs, ɪts ˈOpᵊn nˈW.
+d4aacb7e1f54.mp3	am_michael	How did the interview go?	hˌW dˈɪd ði ˈɪntəɹvjˌu ɡˌO?
+283b3770d6e0.mp3	af_heart	Next Tuesday.	nˈɛkst tˈuzdˌA.
+19bf670fafb5.mp3	af_heart	Very well, I think.	vˈɛɹi wˈɛl, ˌI θˈɪŋk.
+9e7447a7759e.mp3	af_heart	On the second floor.	ˌɔn ðə sˈɛkənd flˈɔɹ.
+4e8594413a9f.mp3	am_michael	Would you like me to print the agenda?	wˌʊd ju lˈIk mˌi tə pɹˈɪnt ði əʤˈɛndə?
+4edfdaac747a.mp3	af_heart	Yes, that would be helpful.	jˈɛs, ðˈæt wʊd bi hˈɛlpfᵊl.
+895836e00dea.mp3	af_heart	The printer on the left.	ðə pɹˈɪntəɹ ˌɔn ðə lˈɛft.
+769c127bff59.mp3	af_heart	An agenda for the meeting.	ɐn əʤˈɛndə fɔɹ ðə mˈiTɪŋ.
+a4d21dd44bd1.mp3	am_michael	Isn't the store open on Sundays?	ˈɪzᵊnt ðə stˈɔɹ ˈOpᵊn ˌɔn sˈʌndˌAz?
+f8b346eba184.mp3	af_heart	No, only Monday through Saturday.	nˈO, ˈOnli mˈʌndˌA θɹu sˈæTəɹdˌA.
+f9077db69518.mp3	af_heart	I bought it at the store.	ˌI bˈɔt ɪt æt ðə stˈɔɹ.
+451bb12172a9.mp3	af_heart	It was a great opening.	ˌɪt wʌz ɐ ɡɹˈAt ˈOpᵊnɪŋ.
+0ba17d6e46b2.mp3	am_michael	Which supplier did you choose?	wˌɪʧ səplˈIəɹ dˈɪd ju ʧˈuz?
+687f41b8d46b.mp3	af_heart	The one with the lowest price.	ðə wˈʌn wɪð ðə lˈOᵻst pɹˈIs.
+1a22808f1db7.mp3	af_heart	Some office supplies.	sˌʌm ˈɔfəs səplˈIz.
+eda3fbd41a59.mp3	af_heart	Yes, I chose it.	jˈɛs, ˌI ʧˈOz ɪt.
+57919f8e97bf.mp3	am_michael	Have you finished the budget proposal?	hˌæv ju fˈɪnəʃt ðə bˈʌʤət pɹəpˈOzᵊl?
+d42f89efa1eb.mp3	af_heart	I'm still working on it.	ˌIm stˈɪl wˈɜɹkɪŋ ˌɔn ɪt.
+3b8ec634f31a.mp3	af_heart	A proposal letter.	ɐ pɹəpˈOzᵊl lˈɛTəɹ.
+202f233b3a46.mp3	af_heart	The budget is large.	ðə bˈʌʤət ɪz lˈɑɹʤ.
+b8248a3f298d.mp3	am_michael	Can you show me how to use the new scanner?	kˌæn ju ʃˈO mˌi hˌW tə jˈuz ðə nˈu skˈænəɹ?
+a9262028b720.mp3	af_heart	Sure, it's quite simple.	ʃˈʊɹ, ɪts kwˈIt sˈɪmpəl.
+bbb440481f30.mp3	af_heart	It's a new scanner.	ˌɪts ɐ nˈu skˈænəɹ.
+2182ab5b7364.mp3	af_heart	I saw the show yesterday.	ˌI sˈɔ ðə ʃˈO jˈɛstəɹdˌA.
+efc345c5c502.mp3	am_michael	How many people are attending the dinner?	hˌW mˈɛni pˈipᵊl ɑɹ ətˈɛndɪŋ ðə dˈɪnəɹ?
+6a8566a4af8f.mp3	af_heart	About fifty.	əbˈWt fˈɪfti.
+7323b5cc2985.mp3	af_heart	At the Italian restaurant.	ˌæt ði ɪtˈæljən ɹˈɛstəɹənt.
+7b1557b2e043.mp3	af_heart	Yes, they are.	jˈɛs, ðA ɑɹ.
+dcafa674e713.mp3	am_michael	Should we take a taxi or the subway?	ʃˌʊd wi tˈAk ɐ tˈæksi ɔɹ ðə sˈʌbwˌA?
+a6abe1c1865c.mp3	af_heart	The subway is faster at this hour.	ðə sˈʌbwˌA ɪz fˈæstəɹ æt ðɪs ˈWəɹ.
+46771fc785be.mp3	af_heart	Yes, we should.	jˈɛs, wi ʃˌʊd.
+d8de4970db25.mp3	af_heart	It's a long way from here.	ˌɪts ɐ lˈɔŋ wˈA fɹʌm hˈɪɹ.
+995c48dcc099.mp3	am_michael	Where's the nearest post office?	wˌɛɹz ðə nˈɪɹᵻst pˈOst ˈɔfəs?
+bc0455e19447.mp3	af_heart	Two blocks down this street.	tˈu blˈɑks dˌWn ðɪs stɹˈit.
+8668f9b2ea77.mp3	af_heart	I'll post it later.	ˌIl pˈOst ɪt lˈATəɹ.
+c2e6c861b7c1.mp3	af_heart	Before five o'clock.	bəfˈɔɹ fˈIv əklˈɑk.
+1cb8c4e449ad.mp3	am_michael	The heater in the conference room isn't working.	ðə hˈiTəɹ ɪn ðə kˈɑnfəɹəns ɹˈum ˈɪzᵊnt wˈɜɹkɪŋ.
+731a7855e5de.mp3	af_heart	I'll call maintenance.	ˌIl kˈɔl mˈAntᵊnəns.
+b459fb53a777.mp3	af_heart	It's a large room.	ˌɪts ɐ lˈɑɹʤ ɹˈum.
+f41184307f23.mp3	af_heart	The meeting is at noon.	ðə mˈiTɪŋ ɪz æt nˈun.
+d5de2efffc84.mp3	am_michael	What time does the last train leave?	wˌʌt tˈIm dˈʌz ðə lˈæst tɹˈAn lˈiv?
+24241e8c7e1f.mp3	af_heart	From platform three.	fɹˌʌm plˈætfˌɔɹm θɹˈi.
+e38e1790439c.mp3	af_heart	At eleven fifteen.	ˌæt əlˈɛvᵊn fˌɪftˈin.
+e487e97bd1fb.mp3	af_heart	A round-trip ticket.	ɐ ɹˈWndtɹˌɪp tˈɪkət.
+6b9abc30f92e.mp3	am_michael	Why don't you take the afternoon off?	wˌI dˈOnt ju tˈAk ði ˌæftəɹnˈun ˈɔf?
+e6b4bc17b901.mp3	af_heart	Thanks, I think I will.	θˈæŋks, ˌI θˈɪŋk ˌI wˈɪl.
+029031d994b8.mp3	af_heart	Because it's raining.	bəkˈʌz ɪts ɹˈAnɪŋ.
+3ebc8f8e2e96.mp3	af_heart	It's off the main road.	ˌɪts ˈɔf ðə mˈAn ɹˈOd.
+3ab7a498e5ef.mp3	am_michael	Who approved the new design?	hˌu əpɹˈuvd ðə nˈu dəzˈIn?
+2d5c78e59df3.mp3	af_heart	The marketing director did.	ðə mˈɑɹkəTɪŋ dəɹˈɛktəɹ dˈɪd.
+a3cc67fc2496.mp3	af_heart	It looks very modern.	ˌɪt lˈʊks vˈɛɹi mˈɑdəɹn.
+1e95ef3d92c1.mp3	af_heart	Yes, it was approved.	jˈɛs, ɪt wʌz əpɹˈuvd.
+73ef432f57be.mp3	am_michael	Did you receive my e-mail about the schedule?	dˈɪd ju ɹəsˈiv mI ˈimˌAl əbˈWt ðə skˈɛʤˌul?
+f9b333e16468.mp3	af_heart	Yes, I read it this morning.	jˈɛs, ˌI ɹˈɛd ɪt ðɪs mˈɔɹnɪŋ.
+63941a56c7b7.mp3	af_heart	A new schedule.	ɐ nˈu skˈɛʤˌul.
+431e35e60eb4.mp3	af_heart	I'll send it by mail.	ˌIl sˈɛnd ɪt bI mˈAl.
+3834dc8207cd.mp3	am_michael	How long have you worked here?	hˌW lˈɔŋ hæv ju wˈɜɹkt hˈɪɹ?
+867e091a4d6e.mp3	af_heart	For about six years.	fˌɔɹ əbˈWt sˈɪks jˈɪɹz.
+1545d0ea5726.mp3	af_heart	It's a long hallway.	ˌɪts ɐ lˈɔŋ hˈɔlwˌA.
+875c20e841e6.mp3	af_heart	Every weekday.	ˈɛvəɹi wˈikdˌA.
+1d4afe958053.mp3	am_michael	Would you mind waiting a few minutes?	wˌʊd ju mˈInd wˈATɪŋ ɐ fjˈu mˈɪnəts?
+33fd33daf998.mp3	af_heart	A minute ago.	ɐ mˈɪnət əɡˈO.
+73e132ca84e2.mp3	af_heart	I don't mind the store.	ˌI dˈOnt mˈInd ðə stˈɔɹ.
+d2a3b84408f8.mp3	am_michael	When will the new software be installed?	wˌɛn wɪl ðə nˈu sˈɔftwˌɛɹ bi ɪnstˈɔld?
+b3e8ca45b134.mp3	af_heart	Over the weekend.	ˈOvəɹ ðə wˈikˌɛnd.
+7e7676416ceb.mp3	af_heart	The IT team will do it.	ði ˌItˈi tˈim wɪl dˈu ɪt.
+7beecbb41fbe.mp3	af_heart	It's very useful.	ˌɪts vˈɛɹi jˈusfᵊl.
+3dd7a86eae1a.mp3	am_michael	Where did you put the client's contract?	wˌɛɹ dˈɪd ju pˌʊt ðə klˈIənts kˈɑntɹˌækt?
+4fcf2b495503.mp3	af_heart	It's in the top drawer.	ˌɪts ɪn ðə tˈɑp dɹˈɔɹ.
+96cf58f9ebc7.mp3	af_heart	He signed it yesterday.	hˌi sˈInd ɪt jˈɛstəɹdˌA.
+31a629f34641.mp3	af_heart	Yes, I put it there.	jˈɛs, ˌI pˌʊt ɪt ðˈɛɹ.
+97457c197b65.mp3	am_michael	Aren't you coming to the team lunch?	ˌɑɹnt ju kˈʌmɪŋ tə ðə tˈim lˈʌnʧ?
+871e5847643e.mp3	af_heart	I have to finish this report first.	ˌI hæv tə fˈɪnəʃ ðɪs ɹəpˈɔɹt fˈɜɹst.
+d12eb910ec92.mp3	af_heart	The lunch menu.	ðə lˈʌnʧ mˈɛnju.
+abd4ca924784.mp3	af_heart	Yes, the team won.	jˈɛs, ðə tˈim wˈʌn.
+ca25cf4ee281.mp3	am_michael	How much does it cost to ship this package?	hˌW mˈʌʧ dˈʌz ɪt kˈɔst tə ʃˈɪp ðɪs pˈækɪʤ?
+81b69e075844.mp3	af_heart	Twelve dollars.	twˈɛlv dˈɑləɹz.
+ab52442a209a.mp3	af_heart	By express mail.	bˌI ɪkspɹˈɛs mˈAl.
+ffe3ed19e23f.mp3	af_heart	Within three days.	wɪðˈɪn θɹˈi dˈAz.
+3647a873dcb2.mp3	am_michael	Let's review the sales figures before the meeting.	lˈɛts ɹəvjˈu ðə sˈAlz fˈɪɡjəɹz bəfˈɔɹ ðə mˈiTɪŋ.
+edb63d6c8196.mp3	af_heart	Good idea, I'll bring the report.	ɡˈʊd Idˈiə, ˌIl bɹˈɪŋ ðə ɹəpˈɔɹt.
+25d872215677.mp3	af_heart	The figures were high.	ðə fˈɪɡjəɹz wɜɹ hˈI.
+19860e48a576.mp3	af_heart	In the meeting room.	ɪn ðə mˈiTɪŋ ɹˈum.
+74e96b43f369.mp3	af_heart	Hi, I'm calling to ask whether you have any rooms available for the night of June twelfth.	hˈI, ˌIm kˈɔlɪŋ tʊ ˈæsk wˈɛðəɹ ju hæv ˈɛni ɹˈumz əvˈAləbᵊl fɔɹ ðə nˈIt ʌv ʤˈun twˈɛlfθ.
+88b7999ff79a.mp3	bm_george	Let me check. Yes, we have a single room and a suite available.	lˈɛt mˌiː ʧˈɛk. jˈɛs, wiː hav ɐ sˈɪŋɡᵊl ɹˈuːm and ɐ swˈiːt əvˈAləbᵊl.
+bdca5de3b099.mp3	af_heart	I'll take the single room. Does the price include breakfast?	ˌIl tˈAk ðə sˈɪŋɡᵊl ɹˈum. dˈʌz ðə pɹˈIs ɪnklˈud bɹˈɛkfəst?
+1d3c6b6486df.mp3	bm_george	It does. Breakfast is served in the lobby café from six to ten.	ˌɪt dˈʌz. bɹˈɛkfəst ɪz sˈɜːvd ɪn ðə lˈɒbi kafˈA fɹɒm sˈɪks tə tˈɛn.
+1b50882d3946.mp3	bm_george	Linda, the printer on our floor is out of toner again.	lˈɪndə, ðə pɹˈɪntə ˌɒn ˌWə flˈɔː ɪz ˈWt ɒv tˈQnə əɡˈɛn.
+3ac0119bab54.mp3	af_heart	I ordered more yesterday. It should arrive this afternoon.	ˌI ˈɔɹdəɹd mˈɔɹ jˈɛstəɹdˌA. ˌɪt ʃˌʊd əɹˈIv ðɪs ˌæftəɹnˈun.
+adcde0fe3493.mp3	bm_george	But I need to print the handouts for the two o'clock meeting.	bˌʌt ˌI nˈiːd tə pɹˈɪnt ðə hˈandWts fɔː ðə tˈuː əklˈɒk mˈiːtɪŋ.
+3f259f7940e1.mp3	af_heart	You can use the printer in the marketing department on the third floor.	jˌu kæn jˈuz ðə pɹˈɪntəɹ ɪn ðə mˈɑɹkəTɪŋ dəpˈɑɹtmənt ˌɔn ðə θˈɜɹd flˈɔɹ.
+d2cceccf3ba8.mp3	af_heart	Excuse me, I'm looking for a gift for my father. He really enjoys cooking.	ɪkskjˈuz mˌi, ˌIm lˈʊkɪŋ fɔɹ ɐ ɡˈɪft fɔɹ mI fˈɑðəɹ. hˌi ɹˈiᵊli ɪnʤˈYz kˈʊkɪŋ.
+9ca61689afa9.mp3	bm_george	Our new Italian cookbook is very popular. It came out last week.	ˌWə njˈuː ɪtˈaljən kˈʊkbʊk ɪz vˈɛɹi pˈɒpjʊlə. ˌɪt kˈAm ˈWt lˈɑːst wˈiːk.
+bf9a2398028b.mp3	af_heart	That sounds perfect. Could you wrap it for me?	ðˈæt sˈWndz pˈɜɹfəkt. kˌʊd ju ɹˈæp ɪt fɔɹ mˌi?
+27454a92d84b.mp3	bm_george	Certainly. Gift wrapping is free for purchases over twenty dollars.	sˈɜːtɪnli. ɡˈɪft ɹˈapɪŋ ɪz fɹˈiː fɔː pˈɜːʧɪsɪz ˈQvə twˈɛnti dˈɒləz.
+10327ab1162b.mp3	bm_george	Have you seen the results of the customer survey?	hˌav juː sˈiːn ðə ɹɪzˈʌlts ɒv ðə kˈʌstəmə sˈɜːvA?
+724d6c19e5be.mp3	af_heart	Yes. Most customers like our products, but many said our delivery times are too long.	jˈɛs. mˈOst kˈʌstəməɹz lˈIk ˌWəɹ pɹˈɑdˌʌkts, bˌʌt mˈɛni sˈɛd ˌWəɹ dəlˈɪvəɹi tˈImz ɑɹ tˈu lˈɔŋ.
+7781535e7c73.mp3	bm_george	Maybe we should work with a second shipping company.	mˈAbiː wiː ʃˌʊd wˈɜːk wɪð ɐ sˈɛkᵊnd ʃˈɪpɪŋ kˈʌmpᵊni.
+4a8e800daa82.mp3	af_heart	Good idea. I'll get some price quotes and present them at Friday's meeting.	ɡˈʊd Idˈiə. ˌIl ɡɛt sˌʌm pɹˈIs kwˈOts ænd pɹizˈɛnt ðˌɛm æt fɹˈIdˌAz mˈiTɪŋ.
+e8587cd79faf.mp3	af_heart	Hello, this is Maria from Doctor Lee's office. I'm calling to reschedule your appointment on Thursday.	həlˈO, ðɪs ɪz mˈɑɹiə fɹʌm dˈɑktəɹ lˈiz ˈɔfəs. ˌIm kˈɔlɪŋ tə ɹiskˈɛʤəl jʊɹ əpˈYntmənt ˌɔn θˈɜɹzdˌA.
+76d123965239.mp3	bm_george	Oh, is something wrong?	ˈQ, ɪz sˈʌmθɪŋ ɹˈɒŋ?
+2a789599482c.mp3	af_heart	Doctor Lee has to attend a conference that day. Could you come in on Friday at nine instead?	dˈɑktəɹ lˈi hæz tʊ ətˈɛnd ɐ kˈɑnfəɹəns ðˈæt dˈA. kˌʊd ju kˈʌm ˈɪn ˌɔn fɹˈIdˌA æt nˈIn ɪnstˈɛd?
+ba145df441cb.mp3	bm_george	Friday morning is fine. Thanks for letting me know.	fɹˈIdA mˈɔːnɪŋ ɪz fˈIn. θˈaŋks fɔː lˈɛtɪŋ mˌiː nˈQ.
+987900e664e8.mp3	bm_george	Jessica, how's the planning for the company picnic going?	ʤˈɛsɪkə, hˌWz ðə plˈanɪŋ fɔː ðə kˈʌmpᵊni pˈɪknɪk ɡˈQɪŋ?
+26076a257b0a.mp3	af_heart	Pretty well. We've booked Lakeview Park for Saturday, July twentieth.	pɹˈɪTi wˈɛl. wˌiv bˈʊkt lˈAkvju pˈɑɹk fɔɹ sˈæTəɹdˌA, ʤəlˈI twˈɛntiəθ.
+78ec2561d1ef.mp3	bm_george	What happens if it rains?	wˌɒt hˈapᵊnz ɪf ɪt ɹˈAnz?
+4f944aecb2d1.mp3	af_heart	The park has a large covered pavilion, so we can move everything inside.	ðə pˈɑɹk hæz ɐ lˈɑɹʤ kˈʌvəɹd pəvˈɪljᵊn, sˌO wi kæn mˈuv ˈɛvəɹiθˌɪŋ ɪnsˈId.
+b41e87f4bd0f.mp3	af_heart	I'd like to open a savings account. What do I need?	ˌId lˈIk tʊ ˈOpᵊn ɐ sˈAvɪŋz əkˈWnt. wˌʌt dˈu ˌI nˈid?
+1f3ad7756660.mp3	bm_george	Just a photo ID and a minimum deposit of one hundred dollars.	ʤˈʌst ɐ fˈQtQ ˌIdˈiː and ɐ mˈɪnɪməm dɪpˈɒzɪt ɒv wˈʌn hˈʌndɹəd dˈɒləz.
+2b1f04ecf399.mp3	af_heart	I have my driver's license with me. Is there a monthly fee?	ˌI hæv mI dɹˈIvəɹz lˈIsᵊns wɪð mˌi. ˌɪz ðɛɹ ɐ mˈʌnθli fˈi?
+e4abddd51c72.mp3	bm_george	No, there's no fee as long as your balance stays above five hundred dollars.	nˈQ, ðɛːz nˈQ fˈiː az lˈɒŋ az jɔː bˈaləns stˈAz əbˈʌv fˈIv hˈʌndɹəd dˈɒləz.
+9c0ef1c1a56d.mp3	bm_george	The new coffee machine in the break room is great, isn't it?	ðə njˈuː kˈɒfi məʃˈiːn ɪn ðə bɹˈAk ɹˈuːm ɪz ɡɹˈAt, ˈɪzᵊnt ɪt?
+cd4e6a4952e4.mp3	af_heart	It is, but it's a little complicated. I couldn't figure out how to make a latte.	ˌɪt ɪz, bˌʌt ɪts ɐ lˈɪTᵊl kˈɑmpləkˌATᵻd. ˌI kˌʊdᵊnt fˈɪɡjəɹ ˈWt hˌW tə mˌAk ɐ lˈɑtˌA.
+c7b8bd5cc3ac.mp3	bm_george	There's a short instruction guide taped to the side of it.	ðˌɛːz ɐ ʃˈɔːt ɪnstɹˈʌkʃᵊn ɡˈId tˈApt tə ðə sˈId ɒv ɪt.
+021d80194513.mp3	af_heart	Oh, I didn't see that. I'll take a look after lunch.	ˈO, ˌI dˈɪdᵊnt sˈi ðˈæt. ˌIl tˈAk ɐ lˈʊk ˈæftəɹ lˈʌnʧ.
+cb34e53929dc.mp3	af_heart	Mark, the client from Brenton Industries just called. They want to move our meeting to next week.	mˈɑɹk, ðə klˈIənt fɹʌm bɹˈɛntən ˈɪndəstɹiz ʤˈʌst kˈɔld. ðˌA wˈɑnt tə mˈuv ˌWəɹ mˈiTɪŋ tə nˈɛkst wˈik.
+68bea1c00762.mp3	bm_george	That's actually good news. We need more time to finish the design samples.	ðˈats ˈakʧʊəli ɡˈʊd njˈuːz. wˌiː nˈiːd mˈɔː tˈIm tə fˈɪnɪʃ ðə dɪzˈIn sˈɑːmpᵊlz.
+f1c802562939.mp3	af_heart	Then I'll suggest Tuesday afternoon.	ðˈɛn ˌIl səɡʤˈɛst tˈuzdˌA ˌæftəɹnˈun.
+4a8365a1a137.mp3	bm_george	Sounds good. And please book the large conference room.	sˈWndz ɡˈʊd. ˌand plˈiːz bˈʊk ðə lˈɑːʤ kˈɒnfəɹəns ɹˈuːm.
+bfc8ec2e7b1a.mp3	bm_george	Excuse me, does this bus go to the City Museum?	ɪkskjˈuːz mˌiː, dˈʌz ðɪs bˈʌs ɡˌQ tə ðə sˈɪti mjuːzˈiːəm?
+214ad9dd54c9.mp3	af_heart	It does, but it takes about forty minutes. The number eight bus is much faster.	ˌɪt dˈʌz, bˌʌt ɪt tˈAks əbˈWt fˈɔɹTi mˈɪnəts. ðə nˈʌmbəɹ ˈAt bˈʌs ɪz mˈʌʧ fˈæstəɹ.
+7d42b0af3a01.mp3	bm_george	Where can I catch the number eight?	wˌɛː kan ˌI kˈaʧ ðə nˈʌmbə ˈAt?
+3a767af2c657.mp3	af_heart	Across the street, in front of the bank.	əkɹˈɔs ðə stɹˈit, ɪn fɹˈʌnt ʌv ðə bˈæŋk.
+0ea6553f6303.mp3	af_heart	I heard you're leading the new marketing campaign for the summer sale.	ˌI hˈɜɹd jʊɹ lˈidɪŋ ðə nˈu mˈɑɹkəTɪŋ kæmpˈAn fɔɹ ðə sˈʌməɹ sˈAl.
+b6eb563252b8.mp3	bm_george	Yes, and I'd like you to design the posters. You did a great job on the last ones.	jˈɛs, and ˌId lˈIk juː tə dɪzˈIn ðə pˈQstəz. jˌuː dˈɪd ɐ ɡɹˈAt ʤˈɒb ˌɒn ðə lˈɑːst wˈʌnz.
+7993abb1140f.mp3	af_heart	I'd be happy to. When do you need them?	ˌId bi hˈæpi tu. wˌɛn dˈu ju nˈid ðˌɛm?
+5b904300ec78.mp3	bm_george	By the end of next week, so we have time to print them before the sale starts.	bˌI ði ˈɛnd ɒv nˈɛkst wˈiːk, sˌQ wiː hav tˈIm tə pɹˈɪnt ðˌɛm bɪfˈɔː ðə sˈAl stˈɑːts.
+f00c387962ac.mp3	bm_george	Hi, I ordered a laptop from your website, but I received the wrong model.	hˈI, ˌI ˈɔːdəd ɐ lˈaptɒp fɹɒm jɔː wˈɛbsIt, bˌʌt ˌI ɹɪsˈiːvd ðə ɹˈɒŋ mˈɒdᵊl.
+60d9c24d82fa.mp3	af_heart	I'm very sorry about that. Can you give me your order number?	ˌIm vˈɛɹi sˈɔɹi əbˈWt ðˈæt. kˌæn ju ɡˈɪv mˌi jʊɹ ˈɔɹdəɹ nˈʌmbəɹ?
+6c098911fb92.mp3	bm_george	Sure, it's four, seven, two, nine, one.	ʃˈʊə, ɪts fˈɔː, sˈɛvᵊn, tˈuː, nˈIn, wˈʌn.
+f95c87f5daa2.mp3	af_heart	Thank you. I'll send you a prepaid label so you can return it, and we'll ship the correct model today.	θˈæŋk ju. ˌIl sˈɛnd ju ɐ pɹˌipˈAd lˈAbəl sˌO ju kæn ɹətˈɜɹn ɪt, ænd wil ʃˈɪp ðə kəɹˈɛkt mˈɑdᵊl tədˈA.
+10b4aa8d69d0.mp3	af_heart	Robert, are you going to the technology conference in Singapore next month?	ɹˈɑbəɹt, ɑɹ ju ɡˈOɪŋ tə ðə tɛknˈɑləʤi kˈɑnfəɹəns ɪn sˈɪŋəpˌɔɹ nˈɛkst mˈʌnθ?
+9f596988e5fa.mp3	bm_george	I'd like to, but my travel budget hasn't been approved yet.	ˌId lˈIk tuː, bˌʌt mI tɹˈavᵊl bˈʌʤɪt hˈazᵊnt biːn əpɹˈuːvd jˈɛt.
+99018b482fbb.mp3	af_heart	You should talk to Ms. Patel. She's in charge of approving travel requests now.	jˌu ʃˌʊd tˈɔk tə mˈɪz pətˈɛl. ʃˌiz ɪn ʧˈɑɹʤ ʌv əpɹˈuvɪŋ tɹˈævᵊl ɹəkwˈɛsts nˈW.
+a4c8dd894cd9.mp3	bm_george	Thanks, I'll e-mail her this afternoon.	θˈaŋks, ˌIl ˈiːmˌAl hɜː ðɪs ˌɑːftənˈuːn.
+8ae66b661835.mp3	am_michael	Hi, this is Karen Wells from Blue Sky Travel. I'm calling about your trip to Rome next month.	hˈI, ðɪs ɪz kəɹˈɛn wˈɛlz fɹʌm blˈu skˈI tɹˈævᵊl. ˌIm kˈɔlɪŋ əbˈWt jʊɹ tɹˈɪp tə ɹˈOm nˈɛkst mˈʌnθ.
+34eac183ccf5.mp3	am_michael	Unfortunately, the hotel you requested is fully booked for those dates.	ˌʌnfˈɔɹʧᵊnətli, ðə hOtˈɛl ju ɹəkwˈɛstᵻd ɪz fˈʊli bˈʊkt fɔɹ ðOz dˈAts.
+990413aa8d87.mp3	am_michael	However, we've found a similar hotel just two blocks away, and it costs about the same.	hWˈɛvəɹ, wiv fˈWnd ɐ sˈɪmᵊləɹ hOtˈɛl ʤˈʌst tˈu blˈɑks əwˈA, ænd ɪt kˈɔsts əbˈWt ðə sˈAm.
+f2abdf5e7f58.mp3	am_michael	Please call me back at your earliest convenience so we can confirm the reservation.	plˈiz kˈɔl mˌi bˈæk æt jʊɹ ˈɜɹliᵻst kənvˈinjəns sˌO wi kæn kənfˈɜɹm ðə ɹˌɛzəɹvˈAʃən.
+046f93119d14.mp3	am_michael	Good morning, everyone, and welcome to Fairview Chocolate Factory.	ɡˈʊd mˈɔɹnɪŋ, ˈɛvɹiwən, ænd wˈɛlkəm tə fˈɛɹvju ʧˈɑkᵊlət fˈæktəɹi.
+fb5968e9e152.mp3	am_michael	During today's tour, you'll see how our chocolates are made, from roasting the cocoa beans to wrapping the final product.	dˈʊɹɪŋ tədˈAz tˈʊɹ, jul sˈi hˌW ˌWəɹ ʧˈɑkᵊləts ɑɹ mˌAd, fɹʌm ɹˈOstɪŋ ðə kˈOkˌO bˈinz tə ɹˈæpɪŋ ðə fˈInᵊl pɹˈɑdˌʌkt.
+ee200e4590a4.mp3	am_michael	For safety reasons, please wear the hairnets provided and stay behind the yellow lines.	fˌɔɹ sˈAfti ɹˈizᵊnz, plˈiz wˈɛɹ ðə hˈɛɹnˌɛts pɹəvˈIdᵻd ænd stˈA bəhˈInd ðə jˈɛlO lˈInz.
+880892e3ef9a.mp3	am_michael	At the end of the tour, you'll have a chance to taste some of our newest flavors in the gift shop.	ˌæt ði ˈɛnd ʌv ðə tˈʊɹ, jul hæv ɐ ʧˈæns tə tˈAst sˌʌm ʌv ˌWəɹ nˈuᵻst flˈAvəɹz ɪn ðə ɡˈɪft ʃˈɑp.
+8105627cd3ce.mp3	am_michael	Is your old refrigerator using too much electricity? Come to Hamilton Appliances this weekend for our annual energy-saving sale.	ˌɪz jʊɹ ˈOld ɹəfɹˈɪʤəɹˌATəɹ jˈuzɪŋ tˈu mˈʌʧ əlˌɛktɹˈɪsəTi? kˈʌm tə hˈæməltᵊn əplˈIənsᵻz ðɪs wˈikˌɛnd fɔɹ ˌWəɹ ˈænjəwəl ˈɛnəɹʤisˌAvɪŋ sˈAl.
+5071172e6cf5.mp3	am_michael	All energy-efficient refrigerators and washing machines are thirty percent off.	ˈɔl ˌɛnəɹʤiəfˈɪʃənt ɹəfɹˈɪʤəɹˌATəɹz ænd wˈɔʃɪŋ məʃˈinz ɑɹ θˈɜɹTi pəɹsˈɛnt ˈɔf.
+2000f3a9218e.mp3	am_michael	Plus, if you bring in your old appliance, we'll take it away for free.	plˈʌs, ɪf ju bɹˈɪŋ ˈɪn jʊɹ ˈOld əplˈIəns, wil tˈAk ɪt əwˈA fɔɹ fɹˈi.
+5884e065d86c.mp3	am_michael	Hamilton Appliances is located on Grove Street, next to the city library.	hˈæməltᵊn əplˈIənsᵻz ɪz lˈOkˌATᵻd ˌɔn ɡɹˈOv stɹˈit, nˈɛkst tə ðə sˈɪTi lˈIbɹˌɛɹi.
+a712883af9c2.mp3	am_michael	Before we end today's meeting, I'd like to remind everyone about the new expense report system.	bəfˈɔɹ wi ˈɛnd tədˈAz mˈiTɪŋ, ˌId lˈIk tə ɹəmˈInd ˈɛvɹiwən əbˈWt ðə nˈu ɪkspˈɛns ɹəpˈɔɹt sˈɪstəm.
+f01273b48538.mp3	am_michael	Starting next month, all expense reports must be submitted online instead of on paper.	stˈɑɹTɪŋ nˈɛkst mˈʌnθ, ˈɔl ɪkspˈɛns ɹəpˈɔɹts mˈʌst bi səbmˈɪTᵻd ˌɑnlˈIn ɪnstˈɛd ʌv ˌɔn pˈApəɹ.
+24744cb43788.mp3	am_michael	The finance department will hold two training sessions next week, on Tuesday and Thursday at 3 P.M. Please sign up for one of them by this Friday.	ðə fˈInˌæns dəpˈɑɹtmənt wɪl hˈOld tˈu tɹˈAnɪŋ sˈɛʃənz nˈɛkst wˈik, ˌɔn tˈuzdˌA ænd θˈɜɹzdˌA æt θɹˈi pˌiˈɛm plˈiz sˈIn ˌʌp fɔɹ wˈʌn ʌv ðˌɛm bI ðɪs fɹˈIdˌA.
+e41ad2dbf80a.mp3	am_michael	Good afternoon, passengers. This is your captain speaking. We are currently flying at an altitude of thirty-five thousand feet, and we expect to arrive in Sydney about twenty minutes ahead of schedule.	ɡˈʊd ˌæftəɹnˈun, pˈæsᵊnʤəɹz. ðˌɪs ɪz jʊɹ kˈæptᵊn spˈikɪŋ. wˌi ɑɹ kˈɜɹəntli flˈIɪŋ æt ɐn ˈælTətˌud ʌv θˈɜɹTifˌIv θˈWzᵊnd fˈit, ænd wi ɪkspˈɛkt tʊ əɹˈIv ɪn sˈɪdni əbˈWt twˈɛnti mˈɪnəts əhˈɛd ʌv skˈɛʤˌul.
+ac0a915701a3.mp3	am_michael	The weather in Sydney is sunny, with a temperature of twenty-four degrees.	ðə wˈɛðəɹ ɪn sˈɪdni ɪz sˈʌni, wɪð ɐ tˈɛmpɹəʧəɹ ʌv twˈɛntifˌɔɹ dəɡɹˈiz.
+b05d6577e4ff.mp3	am_michael	In about thirty minutes, our cabin crew will begin serving dinner.	ɪn əbˈWt θˈɜɹTi mˈɪnəts, ˌWəɹ kˈæbən kɹˈu wɪl bəɡˈɪn sˈɜɹvɪŋ dˈɪnəɹ.
+f89cd68e0921.mp3	am_michael	Please keep your seat belts fastened while seated.	plˈiz kˈip jʊɹ sˈit bˈɛlts fˈæsᵊnd wˌIl sˈiTᵻd.
+807793cdbe3e.mp3	am_michael	In local news, the city council has approved a plan to build a new bicycle lane along Main Street.	ɪn lˈOkəl nˈuz, ðə sˈɪTi kˈWnsᵊl hæz əpɹˈuvd ɐ plˈæn tə bˈɪld ɐ nˈu bˈIsəkəl lˈAn əlˈɔŋ mˈAn stɹˈit.
+d18c91338ccc.mp3	am_michael	Construction will begin in April and is expected to take about three months.	kənstɹˈʌkʃən wɪl bəɡˈɪn ɪn ˈApɹəl ænd ɪz ɪkspˈɛktᵻd tə tˈAk əbˈWt θɹˈi mˈʌnθs.
+692c04f70136.mp3	am_michael	During that time, one lane of traffic will be closed during the day.	dˈʊɹɪŋ ðˈæt tˈIm, wˈʌn lˈAn ʌv tɹˈæfɪk wɪl bi klˈOzd dˈʊɹɪŋ ðə dˈA.
+29b22dfe16e3.mp3	am_michael	City officials say the project will make cycling safer and help reduce traffic downtown.	sˈɪTi əfˈɪʃᵊlz sˈA ðə pɹˈɑʤˌɛkt wɪl mˌAk sˈIkᵊlɪŋ sˈAfəɹ ænd hˈɛlp ɹədˈus tɹˈæfɪk dˌWntˈWn.
+5561224d3ab3.mp3	am_michael	Attention, Brookside Mall shoppers. The mall will be closing in fifteen minutes.	ətˈɛnʧən, bɹˈʊksId mˈɔl ʃˈɑpəɹz. ðə mˈɔl wɪl bi klˈOzɪŋ ɪn fˌɪftˈin mˈɪnəts.
+b3851320bb0e.mp3	am_michael	Please bring your final purchases to the registers now. We'd also like to remind you that starting tomorrow, the mall will open one hour earlier, at 9 A.M., for the holiday season.	plˈiz bɹˈɪŋ jʊɹ fˈInᵊl pˈɜɹʧəsᵻz tə ðə ɹˈɛʤəstəɹz nˈW. wˌid ˈɔlsO lˈIk tə ɹəmˈInd ju ðæt stˈɑɹTɪŋ təmˈɑɹO, ðə mˈɔl wɪl ˈOpᵊn wˈʌn ˈWəɹ ˈɜɹliəɹ, æt nˈIn ˌAˈɛm, fɔɹ ðə hˈɑlədˌA sˈizᵊn.
+469062611282.mp3	am_michael	Thank you for shopping at Brookside Mall, and have a pleasant evening.	θˈæŋk ju fɔɹ ʃˈɑpɪŋ æt bɹˈʊksId mˈɔl, ænd hæv ɐ plˈɛzᵊnt ˈivnɪŋ.
+ed307ee8f0ab.mp3	am_michael	Welcome to your first day at Norton Engineering. This morning, you'll complete some paperwork with the human resources team and receive your ID badges.	wˈɛlkəm tə jʊɹ fˈɜɹst dˈA æt nˈɔɹtən ˌɛnʤənˈɪɹɪŋ. ðˌɪs mˈɔɹnɪŋ, jul kəmplˈit sˌʌm pˈApəɹwˌɜɹk wɪð ðə hjˈumən ɹˈisˌɔɹsᵻz tˈim ænd ɹəsˈiv jʊɹ ˌIdˈi bˈæʤᵻz.
+e1feb8225b48.mp3	am_michael	After lunch, your team leaders will show you around the office and introduce you to your coworkers.	ˈæftəɹ lˈʌnʧ, jʊɹ tˈim lˈidəɹz wɪl ʃˈO ju əɹˈWnd ði ˈɔfəs ænd ˌɪntɹədˈus ju tə jʊɹ kˈOwˌɜɹkəɹz.
+552b1a5fc4f4.mp3	am_michael	Tomorrow, you'll begin a two-day training course on our design software.	təmˈɑɹO, jul bəɡˈɪn ɐ tˌudˈA tɹˈAnɪŋ kˈɔɹs ˌɔn ˌWəɹ dəzˈIn sˈɔftwˌɛɹ.
+7d77cfd64bc0.mp3	am_michael	Thank you for calling the Lakeside Art Museum. We are open Tuesday through Sunday from 10 A.M. to 6 P.M., and on Thursdays until 9 P.M. Admission is free for children under twelve.	θˈæŋk ju fɔɹ kˈɔlɪŋ ðə lˈAksˌId ˈɑɹt mjuzˈiəm. wˌi ɑɹ ˈOpᵊn tˈuzdˌA θɹu sˈʌndˌA fɹʌm tˈɛn ˌAˈɛm tə sˈɪks pˌiˈɛm, ænd ˌɔn θˈɜɹzdˌAz ˌʌntˈɪl nˈIn pˌiˈɛm ədmˈɪʃən ɪz fɹˈi fɔɹ ʧˈɪldɹᵊn ˈʌndəɹ twˈɛlv.
+17e3ffd39fcb.mp3	am_michael	Our special exhibition of modern Japanese prints runs until the end of May.	ˌWəɹ spˈɛʃᵊl ˌɛksəbˈɪʃən ʌv mˈɑdəɹn ʤˌæpənˈiz pɹˈɪnts ɹˈʌnz ˌʌntˈɪl ði ˈɛnd ʌv mˈA.
+797b3ba4ceb6.mp3	am_michael	To hear about guided tours, press one. To speak with a staff member, please stay on the line.	tə hˈɪɹ əbˈWt ɡˈIdᵻd tˈʊɹ, pɹˈɛs wˈʌn. tə spˈik wɪð ɐ stˈæf mˈɛmbəɹ, plˈiz stˈA ˌɔn ðə lˈIn.
+5dd01cad5a67.mp3	am_michael	Good evening, and thank you for coming to tonight's workshop on personal finance.	ɡˈʊd ˈivnɪŋ, ænd θˈæŋk ju fɔɹ kˈʌmɪŋ tə tənˈIts wˈɜɹkʃˌɑp ˌɔn pˈɜɹsᵊnəl fˈInˌæns.
+808bb274866b.mp3	am_michael	Our speaker, Daniel Park, is a financial advisor with over fifteen years of experience.	ˌWəɹ spˈikəɹ, dˈænjəl pˈɑɹk, ɪz ɐ fənˈænʃᵊl ədvˈIzəɹ wɪð ˈOvəɹ fˌɪftˈin jˈɪɹz ʌv ɪkspˈɪɹiəns.
+7fb33fde0325.mp3	am_michael	He'll be sharing simple tips on how to save money and plan for the future.	hˌil bi ʃˈɛɹɪŋ sˈɪmpəl tˈɪps ˌɔn hˌW tə sˈAv mˈʌni ænd plˈæn fɔɹ ðə fjˈuʧəɹ.
+5255d4506caa.mp3	am_michael	At the end of his talk, there will be time for questions, so please write them on the cards on your tables.	ˌæt ði ˈɛnd ʌv hɪz tˈɔk, ðɛɹ wɪl bi tˈIm fɔɹ kwˈɛsʧᵊnz, sˌO plˈiz ɹˈIt ðˌɛm ˌɔn ðə kˈɑɹdz ˌɔn jʊɹ tˈAbᵊlz.
