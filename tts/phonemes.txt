@@ -415,3 +415,11 @@ e1feb8225b48.mp3	am_michael	After lunch, your team leaders will show you around 
 808bb274866b.mp3	am_michael	Our speaker, Daniel Park, is a financial advisor with over fifteen years of experience.	ˌWəɹ spˈikəɹ, dˈænjəl pˈɑɹk, ɪz ɐ fənˈænʃᵊl ədvˈIzəɹ wɪð ˈOvəɹ fˌɪftˈin jˈɪɹz ʌv ɪkspˈɪɹiəns.
 7fb33fde0325.mp3	am_michael	He'll be sharing simple tips on how to save money and plan for the future.	hˌil bi ʃˈɛɹɪŋ sˈɪmpəl tˈɪps ˌɔn hˌW tə sˈAv mˈʌni ænd plˈæn fɔɹ ðə fjˈuʧəɹ.
 5255d4506caa.mp3	am_michael	At the end of his talk, there will be time for questions, so please write them on the cards on your tables.	ˌæt ði ˈɛnd ʌv hɪz tˈɔk, ðɛɹ wɪl bi tˈIm fɔɹ kwˈɛsʧᵊnz, sˌO plˈiz ɹˈIt ðˌɛm ˌɔn ðə kˈɑɹdz ˌɔn jʊɹ tˈAbᵊlz.
+8a71843e21fb.mp3	af_bella	He's chopping vegetables.	hˌiz ʧˈɑpɪŋ vˈɛʤtəbəlz.
+5f1bcac94b3d.mp3	af_bella	He's washing some dishes.	hˌiz wˈɔʃɪŋ sˌʌm dˈɪʃᵻz.
+38b318ea8013.mp3	af_bella	He's taking off his hat.	hˌiz tˈAkɪŋ ˈɔf hɪz hˈæt.
+c28adc006717.mp3	af_bella	He's opening an oven.	hˌiz ˈOpᵊnɪŋ ɐn ˈʌvᵊn.
+d6e92bbcb6f6.mp3	af_bella	They're looking at some plans.	ðˌɛɹ lˈʊkɪŋ æt sˌʌm plˈænz.
+a7f50073ac2c.mp3	af_bella	They're climbing a ladder.	ðˌɛɹ klˈImɪŋ ɐ lˈædəɹ.
+bb1b8a325d36.mp3	af_bella	They're putting on their helmets.	ðˌɛɹ pˈʊTɪŋ ˌɔn ðɛɹ hˈɛlməts.
+99782c7ea09d.mp3	af_bella	They're carrying some bricks.	ðˌɛɹ kˈɛɹiɪŋ sˌʌm bɹˈɪks.
