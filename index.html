@@ -15,6 +15,7 @@
   --sky:#cfe7ff; --sky-ink:#2d6aa6; --mint:#cff3e4; --mint-ink:#1f7a5a; --butter:#fff0bf; --butter-ink:#8a6400; --pink:#ffd9e7; --pink-ink:#b8336a;
   --good:#22a06b; --good-bg:#e2f8ee; --bad:#e2486a; --bad-bg:#ffe6ec;
   --shadow:0 5px 0 #f3d4e3;
+  --c-l:#1f6fc4; --c-r:#d6336f; --c-t:#6b46c1;
   --display:"Nunito","Kanit",system-ui,sans-serif;
   --body:"Nunito","Prompt",system-ui,sans-serif;
   --num:"Nunito",system-ui,sans-serif;
@@ -27,6 +28,7 @@
     --sky:#243c58; --sky-ink:#a8d2ff; --mint:#1f4438; --mint-ink:#9be8c8; --butter:#4a3d1c; --butter-ink:#ffe08a; --pink:#4d2640; --pink-ink:#ffb3cf;
     --good:#6fe0a8; --good-bg:#173b2d; --bad:#ff8fa6; --bad-bg:#4a1f2b;
     --shadow:0 5px 0 #18111f;
+    --c-l:#4793dd; --c-r:#e35b8b; --c-t:#9b7be0;
   }
 }
 :root[data-theme="dark"]{
@@ -36,6 +38,7 @@
   --sky:#243c58; --sky-ink:#a8d2ff; --mint:#1f4438; --mint-ink:#9be8c8; --butter:#4a3d1c; --butter-ink:#ffe08a; --pink:#4d2640; --pink-ink:#ffb3cf;
   --good:#6fe0a8; --good-bg:#173b2d; --bad:#ff8fa6; --bad-bg:#4a1f2b;
   --shadow:0 5px 0 #18111f;
+  --c-l:#4793dd; --c-r:#e35b8b; --c-t:#9b7be0;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -97,7 +100,7 @@ input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:2p
 @media (max-width:420px){.scgrid{grid-template-columns:1fr}}
 .scgrid.g2{grid-template-columns:repeat(2,1fr)} .scgrid.g1{grid-template-columns:1fr}
 .pill.timer{font-family:var(--num);font-weight:800;color:var(--accent);background:var(--accent-soft);font-variant-numeric:tabular-nums;margin-left:auto}
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--card);border:2px solid var(--line);border-radius:999px;padding:6px;box-shadow:var(--shadow)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:var(--card);border:2px solid var(--line);border-radius:999px;padding:6px;box-shadow:var(--shadow)}
 .tab{display:flex;flex-direction:column;align-items:center;background:transparent;border:0;border-radius:999px;padding:8px 6px;color:var(--muted);transition:background .15s}
 .tab .tt{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);line-height:1.3}
 .tab .td{font-size:12px;line-height:1.3;text-align:center}
@@ -152,6 +155,42 @@ input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:2p
 .btn.small{padding:5px 12px;font-size:13px}
 .btn.ghost.small{padding:4px 11px}
 .tipline{background:var(--butter);border-radius:12px;padding:10px 12px}
+.chartwrap{width:100%;overflow-x:auto}
+svg.chart{display:block;width:100%;min-width:320px;height:auto;font-family:var(--num)}
+svg.chart .grid{stroke:var(--line);stroke-width:1}
+svg.chart .axis{stroke:var(--muted);stroke-width:1}
+svg.chart .tick{fill:var(--muted);font-size:12px;font-weight:600}
+svg.chart .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+svg.chart .dot{stroke:var(--card);stroke-width:2}
+svg.chart .hit{fill:transparent}
+svg.chart .pt{cursor:pointer;outline:none}
+svg.chart .pt:hover .dot,svg.chart .pt:focus .dot{r:7}
+svg.chart .val{fill:var(--ink);font-size:15px;font-weight:900}
+svg.chart .lab{fill:var(--muted);font-size:12px;font-weight:700}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-weight:700;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:4px;border-radius:999px;display:inline-block}
+.scn.up{color:var(--good)} .scn.down{color:var(--bad)}
+.tablewrap{overflow-x:auto}
+.ptable{width:100%;border-collapse:collapse;font-size:15px}
+.ptable th,.ptable td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ptable thead th{font-size:13px;color:var(--muted);font-weight:700}
+.ptable tbody th{font-family:var(--num);font-weight:800}
+.ptable td{font-variant-numeric:tabular-nums}
+.ptable .mini{display:inline-block;width:70px;height:8px;background:var(--line);border-radius:999px;overflow:hidden;vertical-align:middle;margin-right:8px}
+.ptable .mini i{display:block;height:100%}
+.ptable .mini i.g{background:var(--good)} .ptable .mini i.m{background:var(--mark)} .ptable .mini i.b{background:var(--bad)}
+.num2{font-family:var(--num);font-weight:700}
+.num2.up{color:var(--good)} .num2.down{color:var(--bad)}
+.hlist{display:flex;flex-direction:column;gap:8px}
+.hrow{display:flex;gap:12px;align-items:center;background:var(--paper);border-radius:14px;padding:10px 12px}
+.hrow .t{font-weight:700;font-family:var(--display)}
+.hrow .d{font-size:13px;color:var(--muted)}
+.hno{font-family:var(--num);font-weight:900;color:var(--accent)}
+.hsc{display:flex;flex-direction:column;align-items:flex-end;font-family:var(--num);font-variant-numeric:tabular-nums}
+.hsc strong{font-size:18px}
+.tab .td{white-space:nowrap}
+@media (max-width:420px){.tab .tt{font-size:15px}.tab .td{font-size:11px}}
 .bar{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--accent) 0 8px,color-mix(in srgb, var(--accent) 80%, #fff) 8px 16px);border-radius:999px}
 .passage{background:var(--paper);border:2px dashed var(--line);border-radius:16px;padding:14px;white-space:pre-wrap;font-size:15px;line-height:1.65}
@@ -608,7 +647,7 @@ function setBest(id, n){ try { var b = JSON.parse(localStorage.getItem("toeic-be
 /* ---------- สถานะ ---------- */
 var S = { access:"loading", isOwner:false, dbReady:false, message:"", saving:false, adminErr:"",
           tts:null, speaking:false, showScript:false, audioErr:"", confirmReset:false,
-          flash:null, confirmClearReview:false,
+          flash:null, confirmClearReview:false, confirmClearH:false,
           timed:false, timeUp:false, deadline:0, tally:{}, mode:"practice", answers:[], confirmSubmit:false, unanswered:0,
           tab:(function(){ try { return localStorage.getItem("toeic-tab") || "exam"; } catch(e){ return "exam"; } })(), topic:null,
           view:"home", set:null, i:0, picked:null, wrong:[], correct:0 };
@@ -748,7 +787,7 @@ function resetRow(label){
     : h("div",{class:"row"},[ h("button",{class:"btn ghost",text:label,onclick:function(){ S.confirmReset = true; renderApp(); }}) ]);
 }
 function tabBar(){
-  var tabs = [["exam","สอบ","จำลองสอบจริง"],["practice","ติว","ฝึกทีละ Part"],["grammar","แกรมม่า","ติวเข้ม 12 หัวข้อ"]];
+  var tabs = [["exam","สอบ","จำลองสอบจริง"],["practice","ติว","ฝึกทีละ Part"],["grammar","แกรมม่า","ติวเข้ม 12 หัวข้อ"],["progress","พัฒนาการ","กราฟคะแนน"]];
   return h("nav",{class:"tabs", role:"tablist", "aria-label":"เลือกโหมด"}, tabs.map(function(t){
     var on = S.tab === t[0];
     return h("button",{class:"tab" + (on ? " on" : ""), role:"tab", "aria-selected": on ? "true" : "false", onclick:function(){ setTab(t[0]); }},[
@@ -766,6 +805,7 @@ function renderHome(){
   var kids = [ tabBar() ];
   if (S.tab === "exam") kids = kids.concat(homeExam());
   else if (S.tab === "grammar") kids = kids.concat(homeGrammar());
+  else if (S.tab === "progress") kids = kids.concat(homeProgress());
   else kids = kids.concat(homePractice());
   app.appendChild(h("div",{class:"sets"},kids));
 }
@@ -1156,6 +1196,7 @@ function finish(){
   var ids = {};
   S.set.items.forEach(function(it){ ids[it._sid] = true; });
   if (!S.set.review) for (var id in ids) setBest(id, S.tally[id] || 0);
+  if (S.mode === "exam") saveHistory();
   S.view = "result"; renderApp(); window.scrollTo(0,0);
 }
 function renderSetup(){
@@ -1257,6 +1298,174 @@ function next(){
   stopAudio(); S.showScript = false; S.audioErr = "";
   if (S.i + 1 < S.set.items.length){ S.i++; S.picked = null; renderApp(); window.scrollTo(0,0); }
   else finish();
+}
+
+
+/* ---------- พัฒนาการ: เก็บผลสอบทุกครั้ง แล้วแสดงเป็นกราฟ ---------- */
+function loadH(){ try { var h = JSON.parse(localStorage.getItem("toeic-history") || "[]"); return Array.isArray(h) ? h : []; } catch(e){ return []; } }
+function saveH(list){ try { localStorage.setItem("toeic-history", JSON.stringify(list.slice(-100))); } catch(e){} }
+function saveHistory(){
+  var e = {t:Date.now(), kind:S.set.id, timed:!!S.timed, blank:S.unanswered || 0, parts:{}};
+  SECTIONS.forEach(function(sec){ var r = attemptScore(sec); if (r.score != null) e[sec.name === "Listening" ? "L" : "R"] = r.score; });
+  if (e.L != null && e.R != null) e.total = e.L + e.R;
+  S.set.items.forEach(function(it, i){
+    var p = it._part; if (!/^Part \d/.test(p)) return;
+    if (!e.parts[p]) e.parts[p] = [0, 0];
+    e.parts[p][1]++; if (S.answers[i] === it.a) e.parts[p][0]++;
+  });
+  var list = loadH(); list.push(e); saveH(list);
+}
+var EXAMKIND = {fullAll:"สอบเต็ม 200 ข้อ", fullListening:"Listening 100 ข้อ", fullReading:"Reading 100 ข้อ"};
+function fmtDate(t){
+  var d = new Date(t), m = ["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."][d.getMonth()];
+  return d.getDate() + " " + m + " " + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
+}
+var SVGNS = "http://www.w3.org/2000/svg";
+function sv(tag, attrs, kids){
+  var e = document.createElementNS(SVGNS, tag);
+  for (var k in attrs) e.setAttribute(k, attrs[k]);
+  (kids || []).forEach(function(c){ if (c) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+  return e;
+}
+/* กราฟเส้น: แกน y เดียว เริ่มที่ 0, เส้น 2px, จุด 8px, ป้ายค่าเฉพาะจุดล่าสุด, ชี้ที่จุดเพื่อดูรายละเอียด */
+function lineChart(opt){
+  var W = 440, H = 230, L = 40, R = 74, T = 14, B = 30, n = opt.count, max = opt.max, stepV = opt.step;
+  var x = function(i){ return n <= 1 ? L + (W - L - R) / 2 : L + i * (W - L - R) / (n - 1); };
+  var y = function(v){ return T + (1 - v / max) * (H - T - B); };
+  var svg = sv("svg", {viewBox:"0 0 " + W + " " + H, class:"chart", role:"img", "aria-label":opt.label});
+  for (var v = 0; v <= max; v += stepV){
+    var yy = y(v);
+    svg.appendChild(sv("line", {x1:L, x2:W - R + 6, y1:yy, y2:yy, class: v === 0 ? "axis" : "grid"}));
+    svg.appendChild(sv("text", {x:L - 6, y:yy + 4, "text-anchor":"end", class:"tick"}, [String(v)]));
+  }
+  var step = Math.max(1, Math.ceil(n / 6));
+  for (var i = 0; i < n; i += step) svg.appendChild(sv("text", {x:x(i), y:H - 8, "text-anchor":"middle", class:"tick"}, ["#" + (i + 1)]));
+  if (n > 1 && (n - 1) % step) svg.appendChild(sv("text", {x:x(n - 1), y:H - 8, "text-anchor":"middle", class:"tick"}, ["#" + n]));
+  var labels = [];
+  opt.series.forEach(function(se){
+    var pts = se.points;
+    if (pts.length > 1) svg.appendChild(sv("polyline", {points:pts.map(function(p){ return x(p.i) + "," + y(p.v); }).join(" "), class:"ln", style:"stroke:" + se.color}));
+    pts.forEach(function(p, k){
+      var last = k === pts.length - 1;
+      svg.appendChild(sv("g", {class:"pt", tabindex:"0"}, [
+        sv("title", {}, [se.name + " " + p.v + " · ครั้งที่ " + (p.i + 1) + " · " + p.when]),
+        sv("circle", {cx:x(p.i), cy:y(p.v), r:14, class:"hit"}),
+        sv("circle", {cx:x(p.i), cy:y(p.v), r: last ? 5.5 : 4, class:"dot", style:"fill:" + se.color})
+      ]));
+      if (last) labels.push({x:x(p.i) + 10, y:y(p.v), v:p.v, name:se.name});
+    });
+  });
+  /* กันป้ายค่าของสองเส้นทับกัน */
+  var gap = opt.series.length > 1 ? 30 : 0;
+  labels.sort(function(a, b){ return a.y - b.y; });
+  for (var k = 1; k < labels.length; k++){
+    if (labels[k].y - labels[k - 1].y < gap){
+      var need = gap - (labels[k].y - labels[k - 1].y);
+      labels[k - 1].y -= need / 2; labels[k].y += need / 2;
+    }
+  }
+  labels.forEach(function(lb){
+    svg.appendChild(sv("text", {x:lb.x, y:lb.y + 4, class:"val"}, [String(lb.v)]));
+    if (opt.series.length > 1) svg.appendChild(sv("text", {x:lb.x, y:lb.y + 17, class:"lab"}, [lb.name]));
+  });
+  var wrap = h("div",{class:"chartwrap"});
+  wrap.appendChild(svg);
+  return wrap;
+}
+function homeProgress(){
+  var list = loadH();
+  if (!list.length){
+    return [ h("section",{class:"card center"},[
+      h("h2",{text:"ยังไม่มีผลสอบ"}),
+      h("p",{class:"muted",text:"ทำข้อสอบในแท็บ สอบ แล้วผลแต่ละครั้งจะถูกเก็บไว้ที่นี่ พร้อมกราฟพัฒนาการของคะแนน Listening, Reading และคะแนนรวม"}),
+      h("button",{class:"btn",text:"ไปทำข้อสอบ",onclick:function(){ setTab("exam"); }})
+    ]) ];
+  }
+  var out = [];
+  var totals = list.filter(function(e){ return e.total != null; });
+  var lastT = totals[totals.length - 1], firstT = totals[0];
+  var bestT = totals.reduce(function(m, e){ return e.total > m ? e.total : m; }, 0);
+  var tiles = [];
+  if (lastT){
+    var diff = lastT.total - firstT.total;
+    tiles.push(h("div",{class:"sc"},[ h("div",{class:"muted",text:"คะแนนรวมล่าสุด"}), h("div",{class:"scn"},[ "≈" + lastT.total, h("small",{text:" /990"}) ]), h("div",{class:"muted",text:fmtDate(lastT.t)}) ]));
+    tiles.push(h("div",{class:"sc"},[ h("div",{class:"muted",text:"ดีที่สุด"}), h("div",{class:"scn"},[ "≈" + bestT, h("small",{text:" /990"}) ]), h("div",{class:"muted",text:"จาก " + totals.length + " ครั้งที่สอบเต็ม"}) ]));
+    tiles.push(h("div",{class:"sc"},[ h("div",{class:"muted",text:"เทียบครั้งแรก"}), h("div",{class:"scn " + (diff > 0 ? "up" : diff < 0 ? "down" : "")},[ (diff > 0 ? "↑ +" : diff < 0 ? "↓ " : "") + diff ]), h("div",{class:"muted",text: totals.length > 1 ? "คะแนน" : "สอบอีกครั้งเพื่อเทียบ"}) ]));
+  } else {
+    var lastE = list[list.length - 1];
+    tiles.push(h("div",{class:"sc"},[ h("div",{class:"muted",text:"สอบไปแล้ว"}), h("div",{class:"scn",text:list.length + " ครั้ง"}), h("div",{class:"muted",text:"ล่าสุด " + fmtDate(lastE.t)}) ]));
+  }
+  out.push(h("section",{class:"card"},[ h("h2",{text:"พัฒนาการของคุณ"}), h("div",{class:"scgrid" + (tiles.length === 1 ? " g1" : "")},tiles) ]));
+
+  /* กราฟคะแนนรวม */
+  var tPts = []; list.forEach(function(e, i){ if (e.total != null) tPts.push({i:i, v:e.total, when:fmtDate(e.t)}); });
+  out.push(h("section",{class:"card"},[
+    h("h2",{text:"คะแนนรวม (เต็ม 990)"}),
+    tPts.length ? lineChart({count:list.length, max:1000, step:200, label:"กราฟคะแนนรวมแต่ละครั้ง", series:[{name:"คะแนนรวม", color:"var(--c-t)", points:tPts}]})
+      : h("p",{class:"muted",text:"คะแนนรวมจะขึ้นเมื่อทำ สอบเต็ม 200 ข้อ ส่วนการสอบแยก Listening หรือ Reading ดูได้ในกราฟถัดไป"}),
+    tPts.length ? h("p",{class:"muted",text:"แกนนอนคือครั้งที่สอบ ชี้หรือแตะที่จุดเพื่อดูวันที่และคะแนน"}) : null
+  ]));
+
+  /* กราฟ Listening / Reading */
+  var lP = [], rP = [];
+  list.forEach(function(e, i){ if (e.L != null) lP.push({i:i, v:e.L, when:fmtDate(e.t)}); if (e.R != null) rP.push({i:i, v:e.R, when:fmtDate(e.t)}); });
+  out.push(h("section",{class:"card"},[
+    h("h2",{text:"Listening และ Reading (เต็มส่วนละ 495)"}),
+    h("div",{class:"legend"},[
+      h("span",{},[ h("i",{style:"background:var(--c-l)"}), "Listening" ]),
+      h("span",{},[ h("i",{style:"background:var(--c-r)"}), "Reading" ])
+    ]),
+    lineChart({count:list.length, max:500, step:100, label:"กราฟคะแนน Listening และ Reading",
+      series:[{name:"Listening", color:"var(--c-l)", points:lP}, {name:"Reading", color:"var(--c-r)", points:rP}]})
+  ]));
+
+  /* ความแม่นแยก Part: ครั้งล่าสุดเทียบครั้งก่อน */
+  var rows = [];
+  ["Part 1","Part 2","Part 3","Part 4","Part 5","Part 6","Part 7"].forEach(function(p){
+    var hits = list.filter(function(e){ return e.parts && e.parts[p]; });
+    if (!hits.length) return;
+    var pct = function(e){ return Math.round(e.parts[p][0] / e.parts[p][1] * 100); };
+    var cur = pct(hits[hits.length - 1]), prev = hits.length > 1 ? pct(hits[hits.length - 2]) : null;
+    var best = hits.reduce(function(m, e){ return Math.max(m, pct(e)); }, 0), d = prev == null ? null : cur - prev;
+    rows.push(h("tr",{},[
+      h("th",{text:p}),
+      h("td",{},[ h("span",{class:"mini"},[ h("i",{class: cur >= 80 ? "g" : cur >= 60 ? "m" : "b", style:"width:" + cur + "%"}) ]), h("span",{class:"num2",text:cur + "%"}) ]),
+      h("td",{class:"num2 " + (d > 0 ? "up" : d < 0 ? "down" : ""),text: d == null ? "–" : (d > 0 ? "↑ +" : d < 0 ? "↓ " : "") + d}),
+      h("td",{class:"num2",text:best + "%"})
+    ]));
+  });
+  if (rows.length) out.push(h("section",{class:"card"},[
+    h("h2",{text:"ความแม่นแยกตาม Part"}),
+    h("div",{class:"tablewrap"},[ h("table",{class:"ptable"},[
+      h("thead",{},[ h("tr",{},[ h("th",{text:"Part"}), h("th",{text:"ครั้งล่าสุด"}), h("th",{text:"เทียบครั้งก่อน"}), h("th",{text:"ดีสุด"}) ]) ]),
+      h("tbody",{},rows)
+    ]) ]),
+    h("p",{class:"muted",text:"แถบเขียว 80% ขึ้นไป · เหลือง 60–79% · แดงต่ำกว่า 60% ลูกศรบอกว่าดีขึ้นหรือลดลงจากครั้งก่อน"})
+  ]));
+
+  /* ประวัติทุกครั้ง */
+  var hist = list.slice().reverse().map(function(e, k){
+    var no = list.length - k;
+    return h("div",{class:"hrow"},[
+      h("span",{class:"hno",text:"#" + no}),
+      h("span",{class:"grow"},[ h("div",{class:"t",text:EXAMKIND[e.kind] || "สอบ"}), h("div",{class:"d",text:fmtDate(e.t) + (e.timed ? " · จับเวลา" : " · ไม่จับเวลา") + (e.blank ? " · ไม่ได้ตอบ " + e.blank + " ข้อ" : "")}) ]),
+      h("span",{class:"hsc"},[
+        e.total != null ? h("strong",{text:"≈" + e.total}) : null,
+        h("span",{class:"muted",text:[e.L != null ? "L " + e.L : "", e.R != null ? "R " + e.R : ""].filter(Boolean).join(" · ")})
+      ])
+    ]);
+  });
+  out.push(h("section",{class:"card"},[
+    h("div",{class:"head2"},[ h("h2",{text:"ประวัติการสอบ"}), h("span",{class:"muted",text:list.length + " ครั้ง"}) ]),
+    h("div",{class:"hlist"},hist),
+    S.confirmClearH
+      ? h("div",{class:"row"},[ h("span",{text:"ลบประวัติการสอบทั้งหมด?"}),
+          h("button",{class:"btn danger",text:"ลบ",onclick:function(){ saveH([]); S.confirmClearH = false; renderApp(); }}),
+          h("button",{class:"btn ghost",text:"ยกเลิก",onclick:function(){ S.confirmClearH = false; renderApp(); }}) ])
+      : h("div",{class:"row"},[ h("button",{class:"linkbtn",text:"ลบประวัติทั้งหมด",onclick:function(){ S.confirmClearH = true; renderApp(); }}) ])
+  ]));
+  out.push(h("p",{class:"muted",text:"ประวัติเก็บในเบราว์เซอร์ของเครื่องนี้ ปุ่มรีเซ็ตคะแนนไม่ลบประวัติ คะแนนเป็นค่าประมาณจากสเกลของเว็บ ไม่ใช่ตารางของ ETS"}));
+  return out;
 }
 
 /* ---------- วิเคราะห์จุดอ่อนหลังทำเสร็จ ---------- */
@@ -1434,6 +1643,7 @@ function renderResult(){
   var missed = S.wrong.slice();
   if (!exam && S.timeUp) for (var k = S.i + (S.picked != null ? 1 : 0); k < n; k++) if (missed.indexOf(k) < 0) missed.push(k);
   var an = analysisBlock(); if (an) kids.push(an);
+  if (exam) kids.push(h("div",{class:"row"},[ h("span",{class:"muted",text:"บันทึกผลครั้งนี้ไว้ในแท็บ พัฒนาการ แล้ว"}), h("button",{class:"btn ghost small",text:"ดูกราฟพัฒนาการ",onclick:function(){ S.view = "home"; setTab("progress"); }}) ]));
   if (missed.length) kids.push(h("h3",{text:"เฉลยข้อที่พลาด (" + missed.length + " ข้อ)"}));
   missed.forEach(function(i){
     var it = s.items[i], mine = exam ? S.answers[i] : null;
