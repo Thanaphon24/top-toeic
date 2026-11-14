@@ -134,6 +134,24 @@ input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:2p
 .flash .ans{display:flex;align-items:center;gap:10px;font-size:20px}
 .flash .ans .b{font-family:var(--num);font-weight:900;background:var(--good);color:#fff;border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
 @media (prefers-reduced-motion:no-preference){.flash{animation:pop .25s ease-out}@keyframes pop{from{transform:scale(.97);opacity:.6}}}
+.analysis{display:flex;flex-direction:column;gap:10px;background:var(--paper);border-radius:18px;padding:14px;border:2px solid var(--line)}
+.analysis h3{margin:0}
+.wk{display:flex;flex-direction:column;gap:8px}
+.wkrow{display:grid;grid-template-columns:62px 1fr auto auto;gap:10px;align-items:center;background:var(--card);border-radius:12px;padding:8px 10px}
+.wkrow.top{outline:2px solid var(--accent)}
+.wkrow .pill{grid-column:1 / -1;justify-self:start}
+.wkp{font-family:var(--num);font-weight:800;font-size:14px}
+.wkbar{height:10px;background:var(--line);border-radius:999px;overflow:hidden}
+.wkbar i{display:block;height:100%;border-radius:999px}
+.wkbar i.g{background:var(--good)} .wkbar i.m{background:var(--mark)} .wkbar i.b{background:var(--bad)}
+.wkn{font-family:var(--num);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.wkl{font-family:var(--num);font-weight:800;color:var(--bad);font-variant-numeric:tabular-nums;min-width:40px;text-align:right}
+.wkrow.type{grid-template-columns:1fr auto}
+.wkrow.type .wkt{grid-column:1 / -1}
+.wkt{font-weight:600;line-height:1.4}
+.btn.small{padding:5px 12px;font-size:13px}
+.btn.ghost.small{padding:4px 11px}
+.tipline{background:var(--butter);border-radius:12px;padding:10px 12px}
 .bar{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--accent) 0 8px,color-mix(in srgb, var(--accent) 80%, #fff) 8px 16px);border-radius:999px}
 .passage{background:var(--paper);border:2px dashed var(--line);border-radius:16px;padding:14px;white-space:pre-wrap;font-size:15px;line-height:1.65}
@@ -1241,6 +1259,138 @@ function next(){
   else finish();
 }
 
+/* ---------- วิเคราะห์จุดอ่อนหลังทำเสร็จ ---------- */
+var PRON = "i me my mine myself you your yours yourself he him his himself she her hers herself it its it's itself we us our ours ourselves they them their theirs themselves those these each other one another".split(" ");
+var RELW = ["who","whom","whose","which","that","what","where","when"];
+var CONNW = ["although","though","even though","despite","in spite of","because","because of","due to","owing to","since","as","while","during","unless","if","in case","whether","so that","in order to","once","until","before","after","however","therefore","moreover","now that","so","but","or","and","nor","neither","either","both","yet","rather than","such as","instead of","by","for","with","within","between","among","from","at","on","in","to","of","about","into","onto","along","across","through","until further","toward","throughout","upon","beyond","without","except","besides","like","as soon as","as long as","no later than","even if","in order","so as to"];
+function qtype(it){
+  var part = it._part || "", q = it.q || "";
+  if (it._topic){ var t = topicOf(it); return {k:"g-" + it._topic, label:"แกรมม่า: " + (t ? t.title.split(" (")[0] : it._topic), topic:it._topic}; }
+  if (part === "Part 5" || part === "Part 6"){
+    if (/เลือกประโยค/.test(q)) return {k:"insert", label:"เลือกประโยคใส่ในเนื้อเรื่อง (Part 6)", part:"Part 6"};
+    var o = it.o.map(function(x){ return x.toLowerCase().replace(/[.,]$/, ""); });
+    var all = function(list){ return o.every(function(x){ return list.indexOf(x) >= 0; }); };
+    if (all(PRON)) return {k:"pron", label:"สรรพนาม", topic:"pronoun"};
+    if (all(RELW)) return {k:"rel", label:"Relative pronouns (who / which / whose)", topic:"relative"};
+    if (all(CONNW)) return {k:"conn", label:"บุพบทและคำเชื่อม", topic:"connect"};
+    if (o.some(function(x){ return /^(more|most|less|least) /.test(x); }) || (o.some(function(x){ return /er$/.test(x); }) && o.some(function(x){ return /est$/.test(x); }))) return {k:"comp", label:"การเปรียบเทียบ", topic:"compare"};
+    var aux = /^(will have been |will have |will be |will |has been |have been |had been |has |have |had |is being |are being |is |are |was |were |be |been |being |to |may |can |must |should |would )/;
+    var BE = ["is","are","was","were","be","been","being","am","has","have","had","do","does","did","having"];
+    if (all(BE)) return {k:"verb", label:"รูปกริยา (Tense · Passive · to V / V-ing)", topic:"tense"};
+    var verbish = o.some(function(x){ return aux.test(x); });
+    var core = o.map(function(x){ return x.replace(aux, "").replace(aux, "").replace(/^(in|un|dis|im|ir)(?=.{5})/, ""); });
+    var stem = core[0].slice(0, 4), same = core.every(function(x){ return x.slice(0, 4) === stem; }) && stem.length === 4;
+    if (same && verbish) return {k:"verb", label:"รูปกริยา (Tense · Passive · to V / V-ing)", topic:"tense"};
+    if (same) return {k:"pos", label:"ชนิดของคำ (คำนาม · คุณศัพท์ · -ly)", topic:"pos"};
+    return {k:"vocab", label:"คำศัพท์และความหมาย (" + part + ")", part:part};
+  }
+  var r = qtypeRaw(it, part, q);
+  if (r) return {k:part + ":" + r.k, label:r.label + " (" + part + ")", part:part};
+  return {k:part, label:part === "Part 1" ? "บรรยายภาพ (Part 1)" : part, part:part};
+}
+function qtypeRaw(it, part, q){
+  if (part === "Part 7"){
+    if (/^\[1\]/.test(it.p || "")) return {k:"double", label:"เนื้อเรื่องคู่ (อ่านเชื่อม 2 ข้อความ)", part:part};
+    if (/\bNOT\b/.test(q)) return {k:"not", label:"คำถาม NOT (หาสิ่งที่ไม่มีในเรื่อง)", part:part};
+    if (/mean|meant/.test(q) && /"/.test(q)) return {k:"intent", label:"ความหมายของประโยคในบริบท", part:part};
+    if (/purpose|mainly|main topic/i.test(q)) return {k:"main", label:"ใจความหลัก / จุดประสงค์", part:part};
+    if (/suggested|indicated|implied|most likely|probably|inferred/i.test(q)) return {k:"infer", label:"คำถามอนุมาน (suggested · indicated)", part:part};
+    return {k:"detail", label:"หารายละเอียดในเรื่อง", part:part};
+  }
+  if (part === "Part 3" || part === "Part 4"){
+    if (/next|will .* (do|probably|most likely)|will happen/i.test(q)) return {k:"next", label:"จะเกิดอะไรต่อ (ฟังช่วงท้าย)", part:part};
+    if (/^(Where|Who)\b.*(most likely|probably)|^Who is|^Where (are|is|does)/i.test(q)) return {k:"who", label:"อนุมานผู้พูดและสถานที่", part:part};
+    if (/purpose|mainly|why is .* calling|discussing|about\?$/i.test(q)) return {k:"gist", label:"ใจความหลัก / จุดประสงค์", part:part};
+    return {k:"ldetail", label:"จับรายละเอียดที่ได้ยิน", part:part};
+  }
+  if (part === "Part 2"){
+    var first = it.audio && it.audio[0] ? it.audio[0].t : "";
+    if (/\bor\b/.test(first) && /\?$/.test(first)) return {k:"choice", label:"คำถามให้เลือก (A or B)", part:part};
+    if (/^(When|Where|Who|Who's|Whose|Why|How|What|Which)\b/.test(first)) return {k:"wh", label:"คำถาม Wh- (ฟังคำแรกให้ทัน)", part:part};
+    if (/\?$/.test(first)) return {k:"yn", label:"คำถาม Yes/No · ขอร้อง · เสนอ", part:part};
+    return {k:"stmt", label:"ประโยคบอกเล่า (ตอบทางอ้อม)", part:part};
+  }
+  return null;
+}
+function itemOk(i){
+  if (S.mode === "exam") return S.answers[i] === S.set.items[i].a;
+  var answered = i < S.i || (i === S.i && S.picked != null);
+  return answered && S.wrong.indexOf(i) < 0;
+}
+function goTopic(id){ var g = GSETS.filter(function(x){ return x.topic.id === id; })[0]; if (!g) return; S.topic = g; S.view = "lesson"; renderApp(); window.scrollTo(0,0); }
+function goPart(part){ var st = SETS.filter(function(x){ return x.part === part; })[0]; if (st) openSetup(st); }
+function analysisBlock(){
+  var s = S.set, items = s.items, exam = S.mode === "exam";
+  if (items.length < 5) return null;
+  var kids = [ h("h3",{text:"วิเคราะห์จุดอ่อน"}) ];
+  /* 1) แยกตาม Part พร้อมคะแนนที่หายไป */
+  var parts = {}, order = [];
+  items.forEach(function(it, i){
+    var p = it._part || s.part;
+    if (!parts[p]){ parts[p] = {n:0, c:0, blank:0}; order.push(p); }
+    parts[p].n++; if (itemOk(i)) parts[p].c++;
+    if (exam && S.answers[i] == null) parts[p].blank++;
+  });
+  var multi = order.length > 1 && order.every(function(p){ return /^Part \d/.test(p); });
+  if (multi){
+    var secTot = {};
+    SECTIONS.forEach(function(sec){
+      var n = 0, c = 0;
+      order.forEach(function(p){ if (sec.parts.some(function(x){ return x.part === p; })){ n += parts[p].n; c += parts[p].c; } });
+      secTot[sec.name] = {n:n, c:c};
+    });
+    order.forEach(function(p){
+      var sec = SECTIONS.filter(function(x){ return x.parts.some(function(y){ return y.part === p; }); })[0], t = secTot[sec.name];
+      parts[p].lost = scaled(t.c + (parts[p].n - parts[p].c), t.n) - scaled(t.c, t.n);
+    });
+    var rank = order.slice().sort(function(a, b){ return parts[b].lost - parts[a].lost; });
+    var top = rank.filter(function(p){ return parts[p].lost > 0; });
+    if (top.length) kids.push(h("p",{},[ "ตัวฉุดคะแนนหลักคือ ", h("strong",{text:top[0]}), " (เสียไปราว " + parts[top[0]].lost + " คะแนน)" + (top[1] ? " รองลงมาคือ " + top[1] + " (≈" + parts[top[1]].lost + ")" : "") ]));
+    kids.push(h("div",{class:"wk"}, order.map(function(p){
+      var d = parts[p], pct = Math.round(d.c / d.n * 100), isTop = top[0] === p;
+      return h("div",{class:"wkrow" + (isTop ? " top" : "")},[
+        h("span",{class:"wkp",text:p}),
+        h("span",{class:"wkbar"},[ h("i",{class: pct >= 80 ? "g" : pct >= 60 ? "m" : "b", style:"width:" + pct + "%"}) ]),
+        h("span",{class:"wkn",text:d.c + "/" + d.n}),
+        h("span",{class:"wkl",text: d.lost > 0 ? "−" + d.lost : "เต็ม"}),
+        isTop ? h("span",{class:"pill due",text:"ตัวฉุดอันดับ 1"}) : null
+      ]);
+    })));
+    kids.push(h("p",{class:"muted",text:"ตัวเลขสีแดงคือคะแนน (จาก 495 ของส่วนนั้น) ที่จะได้เพิ่มถ้าทำ Part นั้นถูกหมด ช่วยบอกว่าฝึก Part ไหนแล้วคุ้มที่สุด"}));
+    var blank = 0, blankIn = null, mx = 0;
+    order.forEach(function(p){ blank += parts[p].blank; if (parts[p].blank > mx){ mx = parts[p].blank; blankIn = p; } });
+    if (blank >= 3) kids.push(h("p",{class:"tipline"},[ h("strong",{text:"ทำไม่ทัน " + blank + " ข้อ"}), " ส่วนใหญ่อยู่ใน " + blankIn + " ปัญหาอาจอยู่ที่การจัดเวลามากกว่าความรู้ ลองฝึกแบบจับเวลา และอย่าค้างข้อยากนานเกินไป" ]));
+  }
+  /* 2) แยกตามประเภทคำถาม: แสดงประเภทที่ผิดมากที่สุด */
+  var types = {};
+  items.forEach(function(it, i){
+    var t = qtype(it);
+    if (!types[t.k]) types[t.k] = {t:t, n:0, c:0};
+    types[t.k].n++; if (itemOk(i)) types[t.k].c++;
+  });
+  var weak = Object.keys(types).map(function(k){ return types[k]; })
+    .filter(function(x){ return x.n >= 2 && x.c / x.n < 0.8; })
+    .sort(function(a, b){ return (b.n - b.c) - (a.n - a.c) || a.c / a.n - b.c / b.n; }).slice(0, 4);
+  if (weak.length){
+    kids.push(h("p",{},[ h("strong",{text:"ประเภทคำถามที่ควรฝึกเพิ่ม"}) ]));
+    kids.push(h("div",{class:"wk"}, weak.map(function(x){
+      var pct = Math.round(x.c / x.n * 100), t = x.t;
+      var btn = t.topic ? h("button",{class:"btn ghost small",text:"ติวหัวข้อนี้",onclick:function(){ goTopic(t.topic); }})
+        : t.part && t.part !== s.part ? h("button",{class:"btn ghost small",text:"ฝึก " + t.part,onclick:function(){ goPart(t.part); }}) : null;
+      return h("div",{class:"wkrow type"},[
+        h("span",{class:"wkt",text:t.label}),
+        h("span",{class:"wkn",text:"ถูก " + x.c + "/" + x.n + " (" + pct + "%)"}),
+        btn
+      ]);
+    })));
+  } else if (S.correct < items.length){
+    kids.push(h("p",{class:"muted",text:"ไม่มีประเภทคำถามไหนที่ผิดซ้ำ ๆ ข้อที่พลาดกระจายตัว ลองทวนข้อที่ผิดด้านล่าง"}));
+  }
+  var st = reviewStats();
+  if (st.due.length) kids.push(h("div",{class:"row"},[ h("button",{class:"btn ghost",text:"ทวนข้อที่ผิด (" + Math.min(20, st.due.length) + ")",onclick:startReview}) ]));
+  return h("section",{class:"analysis"},kids);
+}
+
 function attemptScore(sec){
   var c = 0, n = 0;
   S.set.items.forEach(function(it, i){
@@ -1283,6 +1433,7 @@ function renderResult(){
   kids.push(h("p",{text: S.correct === n ? "ถูกทุกข้อ เยี่ยมมาก" : "ทบทวนข้อที่พลาดด้านล่าง แล้วลองทำซ้ำอีกรอบ"}));
   var missed = S.wrong.slice();
   if (!exam && S.timeUp) for (var k = S.i + (S.picked != null ? 1 : 0); k < n; k++) if (missed.indexOf(k) < 0) missed.push(k);
+  var an = analysisBlock(); if (an) kids.push(an);
   if (missed.length) kids.push(h("h3",{text:"เฉลยข้อที่พลาด (" + missed.length + " ข้อ)"}));
   missed.forEach(function(i){
     var it = s.items[i], mine = exam ? S.answers[i] : null;
