@@ -423,3 +423,27 @@ d6e92bbcb6f6.mp3	af_bella	They're looking at some plans.	ðˌɛɹ lˈʊkɪŋ æt
 a7f50073ac2c.mp3	af_bella	They're climbing a ladder.	ðˌɛɹ klˈImɪŋ ɐ lˈædəɹ.
 bb1b8a325d36.mp3	af_bella	They're putting on their helmets.	ðˌɛɹ pˈʊTɪŋ ˌɔn ðɛɹ hˈɛlməts.
 99782c7ea09d.mp3	af_bella	They're carrying some bricks.	ðˌɛɹ kˈɛɹiɪŋ sˌʌm bɹˈɪks.
+6e2e0ae57319.mp3	af_bella	She's watering some plants.	ʃˌiz wˈɔTəɹɪŋ sˌʌm plˈænts.
+88a76a85e6fb.mp3	af_bella	She's opening a window.	ʃˌiz ˈOpᵊnɪŋ ɐ wˈɪndO.
+e336721a5cfd.mp3	af_bella	She's planting a tree.	ʃˌiz plˈæntɪŋ ɐ tɹˈi.
+faa258c604b1.mp3	af_bella	She's arranging flowers in a vase.	ʃˌiz əɹˈAnʤɪŋ flˈWəɹz ɪn ɐ vˈAs.
+438b74ebc8a8.mp3	af_bella	He's reading a newspaper.	hˌiz ɹˈidɪŋ ɐ nˈuzpˌApəɹ.
+1b660d580e9f.mp3	af_bella	He's painting a bench.	hˌiz pˈAntɪŋ ɐ bˈɛnʧ.
+4ad98c6e05c7.mp3	af_bella	He's walking through a park.	hˌiz wˈɔkɪŋ θɹu ɐ pˈɑɹk.
+f6441a3bb436.mp3	af_bella	He's folding a jacket.	hˌiz fˈOldɪŋ ɐ ʤˈækət.
+0ea8713ba43d.mp3	af_bella	They're shaking hands.	ðˌɛɹ ʃˈAkɪŋ hˈændz.
+5ab62af1ec07.mp3	af_bella	They're exchanging business cards.	ðˌɛɹ ɛksʧˈAnʤɪŋ bˈɪznəs kˈɑɹdz.
+f592a2d0728e.mp3	af_bella	They're sitting at a desk.	ðˌɛɹ sˈɪTɪŋ æt ɐ dˈɛsk.
+9031b3007ead.mp3	af_bella	They're putting on their jackets.	ðˌɛɹ pˈʊTɪŋ ˌɔn ðɛɹ ʤˈækəts.
+75050fcc3188.mp3	af_bella	She's reaching for a book.	ʃˌiz ɹˈiʧɪŋ fɔɹ ɐ bˈʊk.
+096b7e4230e7.mp3	af_bella	She's reading at a table.	ʃˌiz ɹˈidɪŋ æt ɐ tˈAbᵊl.
+0fe05ab92c29.mp3	af_bella	She's stacking some chairs.	ʃˌiz stˈækɪŋ sˌʌm ʧˈɛɹz.
+678e0bfee64c.mp3	af_bella	She's paying at a counter.	ʃˌiz pˈAɪŋ æt ɐ kˈWntəɹ.
+914b63b811da.mp3	af_bella	A man is operating a forklift.	ɐ mˈæn ɪz ˈɑpəɹˌATɪŋ ɐ fˈɔɹklˌɪft.
+c3c4e10fb7db.mp3	af_bella	Some boxes are being opened.	sˌʌm bˈɑksᵻz ɑɹ bˈiɪŋ ˈOpᵊnd.
+96e6b09e5741.mp3	af_bella	A man is climbing a ladder.	ɐ mˈæn ɪz klˈImɪŋ ɐ lˈædəɹ.
+4e9710f0b5f8.mp3	af_bella	A truck is parked outside.	ɐ tɹˈʌk ɪz pˈɑɹkt ˌWtsˈId.
+74aa785ff724.mp3	af_bella	Some people are seated in a waiting area.	sˌʌm pˈipᵊl ɑɹ sˈiTᵻd ɪn ɐ wˈATɪŋ ˈɛɹiə.
+0dfcf80ee08f.mp3	af_bella	A train is departing from the platform.	ɐ tɹˈAn ɪz dᵻpˈɑɹTɪŋ fɹʌm ðə plˈætfˌɔɹm.
+0aeeef5f136f.mp3	af_bella	Passengers are boarding a train.	pˈæsᵊnʤəɹz ɑɹ bˈɔɹdɪŋ ɐ tɹˈAn.
+a274c38023fc.mp3	af_bella	Some suitcases are being loaded onto a cart.	sˌʌm sˈutkˌAsᵻz ɑɹ bˈiɪŋ lˈOdᵻd ˈɑntˌu ɐ kˈɑɹt.
