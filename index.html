@@ -247,6 +247,7 @@ footer.foot{display:flex;flex-direction:column;align-items:center;gap:6px;text-a
 <script src="data-reading.js"></script>
 <script src="data-grammar.js"></script>
 <script src="data-more.js"></script>
+<script src="data-listen3.js"></script>
 <script>
 /* ---------- คลังข้อสอบ ---------- */
 var P6A = "To: All Staff\nFrom: Facilities Department\nSubject: Elevator Maintenance\n\nPlease be advised that the main elevator in Building A will be out of service on Saturday, June 14, for routine maintenance. The work is expected to ---(1)--- approximately six hours. During this time, employees should use the stairs or the service elevator located near the loading dock. ---(2)---. We apologize for any ---(3)--- this may cause and appreciate your cooperation. If you have any questions, please ---(4)--- the Facilities Department at extension 204.";
@@ -652,6 +653,26 @@ var LETTERS = ["A","B","C","D"];
     c.q.forEach(function(r){ y4.push(mk(r, {g:"u" + ci, audio:audio})); });
   });
   SOURCE.push({id:"y4", part:"Part 4", items:y4});
+
+  /* คลังชุดที่ 3 (data-listen3.js) */
+  var Z = window.EXTRA3 || {};
+  SOURCE.push({id:"z2", part:"Part 2", items:(Z.p2 || []).map(function(r){
+    return {spoken:true, q:"เลือกคำตอบที่เหมาะกับคำถามที่ได้ยิน",
+      audio:[{t:r[0], v:"buttery"}].concat(r[1].map(function(o, i){ return {t:LETTERS[i] + ". " + o, v:"airy"}; })),
+      o:r[1], a:r[2], e:r[3]};
+  })});
+  var z3 = [];
+  (Z.p3 || []).forEach(function(c, ci){
+    var audio = c.l.map(function(l){ return {t:l[1], v: l[0] === "W" ? "airy" : "rounded", s: l[0] === "W" ? "Woman" : "Man"}; });
+    c.q.forEach(function(r){ z3.push(mk(r, {g:"e" + ci, audio:audio})); });
+  });
+  SOURCE.push({id:"z3", part:"Part 3", items:z3});
+  var z4 = [];
+  (Z.p4 || []).forEach(function(c, ci){
+    var audio = [{t:c.t, v:"buttery"}];
+    c.q.forEach(function(r){ z4.push(mk(r, {g:"f" + ci, audio:audio})); });
+  });
+  SOURCE.push({id:"z4", part:"Part 4", items:z4});
 })();
 
 /* ---------- ชื่อไฟล์เสียงต่อข้อ (P1-01 … P4-10) ต้องตรงกับหน้าบทพูดสำหรับ Speaktor ---------- */
