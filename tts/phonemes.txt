@@ -515,3 +515,51 @@ be25003ef2ec.mp3	af_bella	A man is driving a van.	ɐ mˈæn ɪz dɹˈIvɪŋ ɐ v
 f1f6bebf0738.mp3	af_bella	A woman is waiting for a bus.	ɐ wˈʊmən ɪz wˈATɪŋ fɔɹ ɐ bˈʌs.
 6cd6650ed2dc.mp3	af_bella	A woman is getting into a car.	ɐ wˈʊmən ɪz ɡˈɛTɪŋ ˈɪntu ɐ kˈɑɹ.
 252a4f523e62.mp3	af_bella	A woman is talking on the phone.	ɐ wˈʊmən ɪz tˈɔkɪŋ ˌɔn ðə fˈOn.
+661f349c09d5.mp3	af_bella	A cashier is handing something to a customer.	ɐ kæʃˈɪɹ ɪz hˈændɪŋ sˈʌmθˌɪŋ tə ɐ kˈʌstəməɹ.
+96d9c15edc11.mp3	af_bella	A cashier is stocking some shelves.	ɐ kæʃˈɪɹ ɪz stˈɑkɪŋ sˌʌm ʃˈɛlvz.
+dc5115b2ba3f.mp3	af_bella	A customer is putting on a coat.	ɐ kˈʌstəməɹ ɪz pˈʊTɪŋ ˌɔn ɐ kˈOt.
+6cce652377d2.mp3	af_bella	A customer is pushing a shopping cart.	ɐ kˈʌstəməɹ ɪz pˈʊʃɪŋ ɐ ʃˈɑpɪŋ kˈɑɹt.
+da4770878c88.mp3	af_bella	She's trying on a jacket.	ʃˌiz tɹˈIɪŋ ˌɔn ɐ ʤˈækət.
+eafc218d6ff1.mp3	af_bella	She's folding some clothes.	ʃˌiz fˈOldɪŋ sˌʌm klˈOðz.
+a650e17106d2.mp3	af_bella	She's hanging up a shirt.	ʃˌiz hˈæŋɪŋ ˌʌp ɐ ʃˈɜɹt.
+3641cb7e8de8.mp3	af_bella	She's paying for a purchase.	ʃˌiz pˈAɪŋ fɔɹ ɐ pˈɜɹʧəs.
+304398b768ed.mp3	af_bella	He's pushing a shopping cart.	hˌiz pˈʊʃɪŋ ɐ ʃˈɑpɪŋ kˈɑɹt.
+cd7231b095fd.mp3	af_bella	He's getting into a car.	hˌiz ɡˈɛTɪŋ ˈɪntu ɐ kˈɑɹ.
+6667eabba48d.mp3	af_bella	He's carrying a box on his shoulder.	hˌiz kˈɛɹiɪŋ ɐ bˈɑks ˌɔn hɪz ʃˈOldəɹ.
+d425d0b4ea2a.mp3	af_bella	He's parking a car.	hˌiz pˈɑɹkɪŋ ɐ kˈɑɹ.
+7b7b60284d5b.mp3	af_bella	She's placing items on a shelf.	ʃˌiz plˈAsɪŋ ˈITəmz ˌɔn ɐ ʃˈɛlf.
+e0fcf3b5775b.mp3	af_bella	She's reading a prescription.	ʃˌiz ɹˈidɪŋ ɐ pɹiskɹˈɪpʃən.
+42149cde7bdd.mp3	af_bella	She's talking to a customer.	ʃˌiz tˈɔkɪŋ tə ɐ kˈʌstəməɹ.
+b003879af2e8.mp3	af_bella	She's climbing a ladder.	ʃˌiz klˈImɪŋ ɐ lˈædəɹ.
+62a424f7e383.mp3	af_bella	A customer is paying with a card.	ɐ kˈʌstəməɹ ɪz pˈAɪŋ wɪð ɐ kˈɑɹd.
+c568349fcdf0.mp3	af_bella	A customer is drinking some coffee.	ɐ kˈʌstəməɹ ɪz dɹˈɪŋkɪŋ sˌʌm kˈɔfi.
+53a32e0a18b3.mp3	af_bella	The employee is baking some bread.	ði ˌɛmplˌYˈi ɪz bˈAkɪŋ sˌʌm bɹˈɛd.
+d5d0a579c106.mp3	af_bella	The employee is wiping the counter.	ði ˌɛmplˌYˈi ɪz wˈIpɪŋ ðə kˈWntəɹ.
+e0f4a3fe2b01.mp3	af_bella	He's examining a piece of fruit.	hˌiz ɛɡzˈæmɪnɪŋ ɐ pˈis ʌv fɹˈut.
+edd9f859bd9b.mp3	af_bella	He's selling some vegetables.	hˌiz sˈɛlɪŋ sˌʌm vˈɛʤtəbəlz.
+f95948674cb2.mp3	af_bella	He's weighing some oranges.	hˌiz wˈAɪŋ sˌʌm ˈɔɹᵊnʤᵻz.
+beeda6a5a789.mp3	af_bella	He's paying a vendor.	hˌiz pˈAɪŋ ɐ vˈɛndəɹ.
+b22d80ad1906.mp3	af_bella	He's pulling a suitcase.	hˌiz pˈʊlɪŋ ɐ sˈutkˌAs.
+a0163489f29c.mp3	af_bella	He's checking in at the front desk.	hˌiz ʧˈɛkɪŋ ˈɪn æt ðə fɹˈʌnt dˈɛsk.
+2ed543be8c4d.mp3	af_bella	He's carrying a suitcase up some stairs.	hˌiz kˈɛɹiɪŋ ɐ sˈutkˌAs ˌʌp sˌʌm stˈɛɹz.
+7a8b34e60a41.mp3	af_bella	He's opening a door.	hˌiz ˈOpᵊnɪŋ ɐ dˈɔɹ.
+65244b6e8b32.mp3	af_bella	Passengers are getting on a bus.	pˈæsᵊnʤəɹz ɑɹ ɡˈɛTɪŋ ˌɔn ɐ bˈʌs.
+174c55635562.mp3	af_bella	Passengers are getting off a bus.	pˈæsᵊnʤəɹz ɑɹ ɡˈɛTɪŋ ˈɔf ɐ bˈʌs.
+1f7aab848f0f.mp3	af_bella	A bus is being repaired.	ɐ bˈʌs ɪz bˈiɪŋ ɹəpˈɛɹd.
+3427f71ffd83.mp3	af_bella	A driver is collecting tickets.	ɐ dɹˈIvəɹ ɪz kəlˈɛktɪŋ tˈɪkəts.
+166fb0b835a3.mp3	af_bella	A woman is giving a presentation.	ɐ wˈʊmən ɪz ɡˈɪvɪŋ ɐ pɹˌɛzᵊntˈAʃən.
+55eeb630311d.mp3	af_bella	A woman is turning off a monitor.	ɐ wˈʊmən ɪz tˈɜɹnɪŋ ˈɔf ɐ mˈɑnəTəɹ.
+ba4403eba23d.mp3	af_bella	Some people are leaving a meeting room.	sˌʌm pˈipᵊl ɑɹ lˈivɪŋ ɐ mˈiTɪŋ ɹˈum.
+8d67496d7b29.mp3	af_bella	Some people are taking notes.	sˌʌm pˈipᵊl ɑɹ tˈAkɪŋ nˈOts.
+bb457daf0fa9.mp3	af_bella	People are eating at a long table.	pˈipᵊl ɑɹ ˈiTɪŋ æt ɐ lˈɔŋ tˈAbᵊl.
+e64a85209910.mp3	af_bella	People are standing in a line.	pˈipᵊl ɑɹ stˈændɪŋ ɪn ɐ lˈIn.
+11e1522fa0c8.mp3	af_bella	Some trays are being stacked.	sˌʌm tɹˈAz ɑɹ bˈiɪŋ stˈækt.
+964abc7dbcac.mp3	af_bella	A cook is serving food.	ɐ kˈʊk ɪz sˈɜɹvɪŋ fˈud.
+9e430dce3a03.mp3	af_bella	A worker is inspecting a part.	ɐ wˈɜɹkəɹ ɪz ɪnspˈɛktɪŋ ɐ pˈɑɹt.
+be62514c29c7.mp3	af_bella	A worker is repairing a conveyor belt.	ɐ wˈɜɹkəɹ ɪz ɹᵻpˈɛɹɪŋ ɐ kənvˈAəɹ bˈɛlt.
+edc63095218c.mp3	af_bella	A worker is putting on a helmet.	ɐ wˈɜɹkəɹ ɪz pˈʊTɪŋ ˌɔn ɐ hˈɛlmət.
+eb4cc0aa00ae.mp3	af_bella	A worker is packing boxes.	ɐ wˈɜɹkəɹ ɪz pˈækɪŋ bˈɑksᵻz.
+502b25e39280.mp3	af_bella	He's pressing a button on a machine.	hˌiz pɹˈɛsɪŋ ɐ bˈʌtn ˌɔn ɐ məʃˈin.
+dbed30b0a8bf.mp3	af_bella	He's taking off his helmet.	hˌiz tˈAkɪŋ ˈɔf hɪz hˈɛlmət.
+55ce3b51e39d.mp3	af_bella	He's writing on a clipboard.	hˌiz ɹˈITɪŋ ˌɔn ɐ klˈɪpbˌɔɹd.
+138ac9d1aac7.mp3	af_bella	He's lifting a heavy box.	hˌiz lˈɪftɪŋ ɐ hˈɛvi bˈɑks.
