@@ -834,3 +834,95 @@ b702c1ba4c83.mp3	am_michael	Visit our Web site to see our class schedule.	vˈɪz
 46ab76000e6e.mp3	am_michael	Thank you for calling the City Public Library. Our hours are nine A.M. to eight P.M., Monday through Saturday.	θˈæŋk ju fɔɹ kˈɔlɪŋ ðə sˈɪTi pˈʌblɪk lˈIbɹˌɛɹi. ˌWəɹ ˈWəɹz ɑɹ nˈIn ˌAˈɛm tʊ ˈAt pˌiˈɛm, mˈʌndˌA θɹu sˈæTəɹdˌA.
 a5ed10cb4064.mp3	am_michael	We are closed on Sundays. To renew a book, press one. To ask about our children's reading programs, press two.	wˌi ɑɹ klˈOzd ˌɔn sˈʌndˌAz. tə ɹənˈu ɐ bˈʊk, pɹˈɛs wˈʌn. tʊ ˈæsk əbˈWt ˌWəɹ ʧˈɪldɹᵊnz ɹˈidɪŋ pɹˈOɡɹˌæmz, pɹˈɛs tˈu.
 2c14b1ee1765.mp3	am_michael	To speak with a librarian, please stay on the line.	tə spˈik wɪð ɐ lIbɹˈɛɹiən, plˈiz stˈA ˌɔn ðə lˈIn.
+f5368106f0c3.mp3	af_bella	Some potted plants have been placed on a windowsill.	sˌʌm pˈɑTᵻd plˈænts hæv bɪn plˈAst ˌɔn ɐ wˈɪndOsˌɪl.
+cadfaff59c77.mp3	af_bella	Some plants are being watered.	sˌʌm plˈænts ɑɹ bˈiɪŋ wˈɔTəɹd.
+d6e79dc57acc.mp3	af_bella	Some flowerpots are being moved outside.	sˌʌm flˈWəɹpˌɑts ɑɹ bˈiɪŋ mˈuvd ˌWtsˈId.
+824120fbd4c7.mp3	af_bella	A window is being cleaned.	ɐ wˈɪndO ɪz bˈiɪŋ klˈind.
+9207da02541b.mp3	af_bella	Some shirts are hanging on a rack.	sˌʌm ʃˈɜɹts ɑɹ hˈæŋɪŋ ˌɔn ɐ ɹˈæk.
+0e14bc98122b.mp3	af_bella	Some clothes are being folded.	sˌʌm klˈOðz ɑɹ bˈiɪŋ fˈOldᵻd.
+896ee4c3ff8d.mp3	af_bella	A customer is trying on a shirt.	ɐ kˈʌstəməɹ ɪz tɹˈIɪŋ ˌɔn ɐ ʃˈɜɹt.
+616b75c5baed.mp3	af_bella	Some hangers are piled on the floor.	sˌʌm hˈæŋəɹz ɑɹ pˈIld ˌɔn ðə flˈɔɹ.
+3b75ff29364c.mp3	af_bella	A lamp has been placed next to a sofa.	ɐ lˈæmp hæz bɪn plˈAst nˈɛkst tə ɐ sˈOfə.
+5cd2b1c255ae.mp3	af_bella	Some cushions are lying on the floor.	sˌʌm kˈʊʃənz ɑɹ lˈIɪŋ ˌɔn ðə flˈɔɹ.
+ebdecb178eac.mp3	af_bella	A picture is being hung on the wall.	ɐ pˈɪkʧəɹ ɪz bˈiɪŋ hˈʌŋ ˌɔn ðə wˈɔl.
+7aded7e76fb1.mp3	af_bella	A sofa is being moved.	ɐ sˈOfə ɪz bˈiɪŋ mˈuvd.
+edb5a9fef9d5.mp3	af_bella	A ladder is leaning against some shelves.	ɐ lˈædəɹ ɪz lˈinɪŋ əɡˈɛnst sˌʌm ʃˈɛlvz.
+46ea3cd6c5d2.mp3	af_bella	Some books are being put into boxes.	sˌʌm bˈʊks ɑɹ bˈiɪŋ pˌʊt ˈɪntu bˈɑksᵻz.
+7a491ac7c65d.mp3	af_bella	The shelves are empty.	ðə ʃˈɛlvz ɑɹ ˈɛmpti.
+4790b5b42bda.mp3	af_bella	A boat is tied to a post.	ɐ bˈOt ɪz tˈId tə ɐ pˈOst.
+92cff1cc12d9.mp3	af_bella	A boat is sailing across the lake.	ɐ bˈOt ɪz sˈAlɪŋ əkɹˈɔs ðə lˈAk.
+41a250db259b.mp3	af_bella	Some people are rowing a boat.	sˌʌm pˈipᵊl ɑɹ ɹˈOɪŋ ɐ bˈOt.
+1e04b8e31d8c.mp3	af_bella	A boat is being pulled onto the shore.	ɐ bˈOt ɪz bˈiɪŋ pˈʊld ˈɑntˌu ðə ʃˈɔɹ.
+2e0fb8caf541.mp3	af_bella	Some papers are spread out on a desk.	sˌʌm pˈApəɹz ɑɹ spɹˈɛd ˈWt ˌɔn ɐ dˈɛsk.
+3c3f4f731373.mp3	af_bella	Some documents are being printed.	sˌʌm dˈɑkjəmənts ɑɹ bˈiɪŋ pɹˈɪntᵻd.
+2292c37f6a7d.mp3	af_bella	A cup is being filled with coffee.	ɐ kˈʌp ɪz bˈiɪŋ fˈɪld wɪð kˈɔfi.
+ab7554a7a9d8.mp3	af_bella	A laptop is being turned off.	ɐ lˈæptˌɑp ɪz bˈiɪŋ tˈɜɹnd ˈɔf.
+d91900c7662e.mp3	af_bella	She's leaning on a railing.	ʃˌiz lˈinɪŋ ˌɔn ɐ ɹˈAlɪŋ.
+96900b359e06.mp3	af_bella	She's walking down some stairs.	ʃˌiz wˈɔkɪŋ dˌWn sˌʌm stˈɛɹz.
+4761ea919fee.mp3	af_bella	She's opening her bag.	ʃˌiz ˈOpᵊnɪŋ hɜɹ bˈæɡ.
+7a2f3dec3975.mp3	af_bella	He's kneeling to repair a cabinet.	hˌiz nˈilɪŋ tə ɹəpˈɛɹ ɐ kˈæbᵊnət.
+dfab0803be6a.mp3	af_bella	He's carrying a toolbox.	hˌiz kˈɛɹiɪŋ ɐ tˈulbˌɑks.
+66b23d55a448.mp3	af_bella	He's closing a drawer.	hˌiz klˈOzɪŋ ɐ dɹˈɔɹ.
+b826323fcca8.mp3	af_bella	She's looking into a microscope.	ʃˌiz lˈʊkɪŋ ˈɪntu ɐ mˈIkɹəskˌOp.
+3c6ff37e27ff.mp3	af_bella	She's taking off her gloves.	ʃˌiz tˈAkɪŋ ˈɔf hɜɹ ɡlˈʌvz.
+96f0d275b02f.mp3	af_bella	She's writing in a notebook.	ʃˌiz ɹˈITɪŋ ɪn ɐ nˈOtbˌʊk.
+f51869d97c48.mp3	af_bella	She's washing some glass tubes.	ʃˌiz wˈɔʃɪŋ sˌʌm ɡlˈæs tˈubz.
+0e3fa4ceb476.mp3	af_bella	She's reaching into a cabinet.	ʃˌiz ɹˈiʧɪŋ ˈɪntu ɐ kˈæbᵊnət.
+9502cb7ddc5b.mp3	af_bella	She's stacking plates on a counter.	ʃˌiz stˈækɪŋ plˈAts ˌɔn ɐ kˈWntəɹ.
+fb85d3e469c5.mp3	af_bella	She's cooking on a stove.	ʃˌiz kˈʊkɪŋ ˌɔn ɐ stˈOv.
+17654413501e.mp3	af_bella	She's tying her apron.	ʃˌiz tˈIɪŋ hɜɹ ˈApɹən.
+77c0327cf03e.mp3	af_bella	He's wiping a counter.	hˌiz wˈIpɪŋ ɐ kˈWntəɹ.
+6c3f62c83b70.mp3	af_bella	He's making some coffee.	hˌiz mˈAkɪŋ sˌʌm kˈɔfi.
+6a53d7a32601.mp3	af_bella	He's taking an order.	hˌiz tˈAkɪŋ ɐn ˈɔɹdəɹ.
+5047bbf4393c.mp3	af_bella	He's drying some cups.	hˌiz dɹˈIɪŋ sˌʌm kˈʌps.
+5e64b5be8f6e.mp3	af_bella	He's holding a tray of drinks.	hˌiz hˈOldɪŋ ɐ tɹˈA ʌv dɹˈɪŋks.
+0d834681cf2c.mp3	af_bella	He's pouring some juice.	hˌiz pˈɔɹɪŋ sˌʌm ʤˈus.
+e55a2989a43e.mp3	af_bella	He's clearing a table.	hˌiz klˈɪɹɪŋ ɐ tˈAbᵊl.
+265e3282a9d9.mp3	af_bella	He's handing a menu to a customer.	hˌiz hˈændɪŋ ɐ mˈɛnju tə ɐ kˈʌstəməɹ.
+68add7c6e303.mp3	af_bella	Two people are sitting across from each other.	tˈu pˈipᵊl ɑɹ sˈɪTɪŋ əkɹˈɔs fɹʌm ˈiʧ ˈʌðəɹ.
+f510878a8307.mp3	af_bella	Two people are shaking hands.	tˈu pˈipᵊl ɑɹ ʃˈAkɪŋ hˈændz.
+afb664142a37.mp3	af_bella	A man is typing on a laptop.	ɐ mˈæn ɪz tˈIpɪŋ ˌɔn ɐ lˈæptˌɑp.
+8685714cbe09.mp3	af_bella	A woman is standing by a window.	ɐ wˈʊmən ɪz stˈændɪŋ bI ɐ wˈɪndO.
+0fca844f851c.mp3	af_bella	They're walking side by side.	ðˌɛɹ wˈɔkɪŋ sˈId bI sˈId.
+766e795919eb.mp3	af_bella	They're sitting on a bench.	ðˌɛɹ sˈɪTɪŋ ˌɔn ɐ bˈɛnʧ.
+94ef0808878b.mp3	af_bella	They're riding bicycles.	ðˌɛɹ ɹˈIdɪŋ bˈIsəkəlz.
+afdb81ea8adb.mp3	af_bella	The woman is opening a folder.	ðə wˈʊmən ɪz ˈOpᵊnɪŋ ɐ fˈOldəɹ.
+8c67ecc1f429.mp3	af_bella	Customers are standing in line at a counter.	kˈʌstəməɹz ɑɹ stˈændɪŋ ɪn lˈIn æt ɐ kˈWntəɹ.
+c449216d2a8f.mp3	af_bella	Customers are seated at a table.	kˈʌstəməɹz ɑɹ sˈiTᵻd æt ɐ tˈAbᵊl.
+c9973214b088.mp3	af_bella	A server is cleaning a counter.	ɐ sˈɜɹvəɹ ɪz klˈinɪŋ ɐ kˈWntəɹ.
+092f9fb6abfc.mp3	af_bella	A woman is paying with cash.	ɐ wˈʊmən ɪz pˈAɪŋ wɪð kˈæʃ.
+1d79801a50b1.mp3	af_bella	A group is reviewing some documents.	ɐ ɡɹˈup ɪz ɹəvjˈuɪŋ sˌʌm dˈɑkjəmənts.
+00c5bce126b8.mp3	af_bella	A group is eating lunch together.	ɐ ɡɹˈup ɪz ˈiTɪŋ lˈʌnʧ təɡˈɛðəɹ.
+8dae26ea823e.mp3	af_bella	A woman is giving a speech.	ɐ wˈʊmən ɪz ɡˈɪvɪŋ ɐ spˈiʧ.
+b4af603823ab.mp3	af_bella	Some chairs are stacked in a corner.	sˌʌm ʧˈɛɹz ɑɹ stˈækt ɪn ɐ kˈɔɹnəɹ.
+67547cbe520f.mp3	af_bella	A woman is handing a folder to a man.	ɐ wˈʊmən ɪz hˈændɪŋ ɐ fˈOldəɹ tə ɐ mˈæn.
+48b1af575a9a.mp3	af_bella	A woman is filing some documents.	ɐ wˈʊmən ɪz fˈIlɪŋ sˌʌm dˈɑkjəmənts.
+20b2ec696778.mp3	af_bella	A man is reading a book.	ɐ mˈæn ɪz ɹˈidɪŋ ɐ bˈʊk.
+3141a573b90a.mp3	af_bella	An audience is clapping.	ɐn ˈɔdiəns ɪz klˈæpɪŋ.
+4c352c26c3e1.mp3	af_bella	People are leaving an auditorium.	pˈipᵊl ɑɹ lˈivɪŋ ɐn ˌɔdətˈɔɹiəm.
+4f0bd4ab70c6.mp3	af_bella	A man is adjusting a microphone.	ɐ mˈæn ɪz əʤˈʌstɪŋ ɐ mˈIkɹəfˌOn.
+b5fa4d3f711e.mp3	af_bella	Some seats are being cleaned.	sˌʌm sˈits ɑɹ bˈiɪŋ klˈind.
+11ac1d92561d.mp3	af_bella	He's filling his car with fuel.	hˌiz fˈɪlɪŋ hɪz kˈɑɹ wɪð fjˈuᵊl.
+97ca8818f4bd.mp3	af_bella	He's washing his car.	hˌiz wˈɔʃɪŋ hɪz kˈɑɹ.
+fe45955220da.mp3	af_bella	He's opening the trunk of a car.	hˌiz ˈOpᵊnɪŋ ðə tɹˈʌŋk ʌv ɐ kˈɑɹ.
+95b9b0de25ca.mp3	af_bella	He's paying at a counter.	hˌiz pˈAɪŋ æt ɐ kˈWntəɹ.
+6f07ac7ec7dc.mp3	af_bella	A worker is digging with a shovel.	ɐ wˈɜɹkəɹ ɪz dˈɪɡɪŋ wɪð ɐ ʃˈʌvᵊl.
+7db7679dc373.mp3	af_bella	A worker is driving an excavator.	ɐ wˈɜɹkəɹ ɪz dɹˈIvɪŋ ɐn ˈɛkskəvˌATəɹ.
+fda9556978f9.mp3	af_bella	A worker is taking off his helmet.	ɐ wˈɜɹkəɹ ɪz tˈAkɪŋ ˈɔf hɪz hˈɛlmət.
+3c3ab027dd81.mp3	af_bella	A worker is carrying a ladder.	ɐ wˈɜɹkəɹ ɪz kˈɛɹiɪŋ ɐ lˈædəɹ.
+5d949968f501.mp3	af_bella	Some steel beams are being lifted by a crane.	sˌʌm stˈil bˈimz ɑɹ bˈiɪŋ lˈɪftᵻd bI ɐ kɹˈAn.
+79826ab7f53b.mp3	af_bella	A building is being demolished.	ɐ bˈɪldɪŋ ɪz bˈiɪŋ dəmˈɑlɪʃt.
+5670d5c497e5.mp3	af_bella	Some workers are climbing a ladder.	sˌʌm wˈɜɹkəɹz ɑɹ klˈImɪŋ ɐ lˈædəɹ.
+3babd7b98f9e.mp3	af_bella	A truck is being loaded with sand.	ɐ tɹˈʌk ɪz bˈiɪŋ lˈOdᵻd wɪð sˈænd.
+25df7218406e.mp3	af_bella	A woman is getting out of a taxi.	ɐ wˈʊmən ɪz ɡˈɛTɪŋ ˈWt ʌv ɐ tˈæksi.
+b120aed3c993.mp3	af_bella	A woman is getting into a bus.	ɐ wˈʊmən ɪz ɡˈɛTɪŋ ˈɪntu ɐ bˈʌs.
+ce1e154fe48e.mp3	af_bella	A woman is closing the trunk.	ɐ wˈʊmən ɪz klˈOzɪŋ ðə tɹˈʌŋk.
+95061ff44814.mp3	af_bella	A woman is waving to a driver.	ɐ wˈʊmən ɪz wˈAvɪŋ tə ɐ dɹˈIvəɹ.
+6f77a70bef80.mp3	af_bella	Some cyclists are riding along a road.	sˌʌm sˈIklɪsts ɑɹ ɹˈIdɪŋ əlˈɔŋ ɐ ɹˈOd.
+916478ffce39.mp3	af_bella	Some bicycles are parked by a fence.	sˌʌm bˈIsəkəlz ɑɹ pˈɑɹkt bI ɐ fˈɛns.
+c1c27da12a53.mp3	af_bella	Some people are walking on a sidewalk.	sˌʌm pˈipᵊl ɑɹ wˈɔkɪŋ ˌɔn ɐ sˈIdwˌɔk.
+9826e081ddca.mp3	af_bella	Some cyclists are repairing a tire.	sˌʌm sˈIklɪsts ɑɹ ɹᵻpˈɛɹɪŋ ɐ tˈIəɹ.
+e60e84e8cda0.mp3	af_bella	A boat is passing under a bridge.	ɐ bˈOt ɪz pˈæsɪŋ ˈʌndəɹ ɐ bɹˈɪʤ.
+6c8106513eef.mp3	af_bella	A boat is tied to a dock.	ɐ bˈOt ɪz tˈId tə ɐ dˈɑk.
+d178cc41136c.mp3	af_bella	Some people are fishing from a bridge.	sˌʌm pˈipᵊl ɑɹ fˈɪʃɪŋ fɹʌm ɐ bɹˈɪʤ.
+8e4c93cf39c7.mp3	af_bella	A bridge is being repaired.	ɐ bɹˈɪʤ ɪz bˈiɪŋ ɹəpˈɛɹd.
