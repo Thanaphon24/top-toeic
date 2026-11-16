@@ -88,10 +88,10 @@ function setupDashboard() {
   var chart = sh.newChart().setChartType(Charts.ChartType.COLUMN)
     .addRange(sh.getRange("A18:A60")).addRange(sh.getRange("C18:D60"))
     .setNumHeaders(1).setMergeStrategy(Charts.ChartMergeStrategy.MERGE_COLUMNS)
-    .setOption("title", "คะแนนดีที่สุดของแต่ละคน (Listening / Reading เต็มส่วนละ 495)")
+    .setOption("title", "คะแนนดีที่สุดของแต่ละคน (เต็มส่วนละ 495)")
     .setOption("colors", [BLUE, ROSE])
     .setOption("legend", {position: "top"})
-    .setOption("vAxis", {minValue: 0, maxValue: 495, gridlines: {count: 6}})
+    .setOption("vAxis", {viewWindow: {min: 0, max: 500}, ticks: [0, 100, 200, 300, 400, 500]})
     .setOption("width", 620).setOption("height", 300)
     .setPosition(1, 4, 10, 0).build();
   sh.insertChart(chart);
