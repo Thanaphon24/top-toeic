@@ -1,9 +1,10 @@
 /**
  * รับผลสอบจากเว็บ ติว TOEIC ฟรี แล้วบันทึกลง Google Sheet นี้
- * ติดตั้ง: Extensions > Apps Script > วางโค้ดนี้ > Deploy > New deployment > Web app
+ * ติดตั้ง: script.google.com > New project > วางโค้ดนี้ > Deploy > New deployment > Web app
  *   Execute as: Me   |   Who has access: Anyone
  * แล้วคัดลอก Web app URL ไปใส่ช่อง "report" ใน config.json
  */
+var BOOK = "1LC9_RIKACPgza_uIi_EY3Go5g13f-Ss9Gc1Ikq31a-M"; /* ไอดีของ Google Sheet "ผลสอบ TOEIC" */
 var SHEET = "ผลสอบ";
 var HEAD = ["วันเวลา", "ชื่อ", "ข้อสอบ", "Listening", "Reading", "รวม", "จับเวลา", "ข้อที่ไม่ได้ตอบ",
             "Part 1", "Part 2", "Part 3", "Part 4", "Part 5", "Part 6", "Part 7"];
@@ -13,9 +14,9 @@ function doPost(e) {
   lock.waitLock(10000);
   try {
     var d = JSON.parse(e.postData.contents);
-    var sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET);
+    var sh = SpreadsheetApp.openById(BOOK).getSheetByName(SHEET);
     if (!sh) {
-      sh = SpreadsheetApp.getActiveSpreadsheet().insertSheet(SHEET);
+      sh = SpreadsheetApp.openById(BOOK).insertSheet(SHEET);
       sh.appendRow(HEAD);
       sh.setFrozenRows(1);
       sh.getRange(1, 1, 1, HEAD.length).setFontWeight("bold");
