@@ -220,6 +220,9 @@ svg.chart .lab{fill:var(--muted);font-size:12px;font-weight:700}
 .center{text-align:center;align-items:center;padding:36px 16px}
 footer.foot{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
 @media (prefers-reduced-motion:no-preference){.bar i{transition:width .3s}}
+.namefield{display:flex;flex-direction:column;gap:6px;margin:8px 0}
+.namefield input{font:inherit;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line, #ccc);background:var(--card, #fff);color:inherit;max-width:320px}
+.err{color:#c92a4a;font-weight:600}
 </style>
 </head>
 <body>
@@ -1365,16 +1368,33 @@ function finish(){
   if (S.mode === "exam") saveHistory();
   S.view = "result"; renderApp(); window.scrollTo(0,0);
 }
+function getName(){ try { return localStorage.getItem("toeic-name") || ""; } catch(e){ return ""; } }
 function renderSetup(){
-  var s = S.set, secs = setSecs(s), sec = secOf(s);
+  var s = S.set, secs = setSecs(s), sec = secOf(s), askName = !!(s.exam && S.report);
+  function go(timed){
+    if (askName){
+      var v = (document.getElementById("exam-name") || {}).value || "";
+      v = v.trim().slice(0, 40);
+      if (!v){ S.nameErr = true; renderApp(); return; }
+      S.nameErr = false; S.examName = v;
+      try { localStorage.setItem("toeic-name", v); } catch(e){}
+    }
+    start(s, timed);
+  }
   app.appendChild(h("section",{class:"card"},[
     h("span",{class:"muted",text:s.part}),
     h("h2",{text:s.title}),
     h("p",{text:s.items.length + " ข้อ · " + s.desc}),
+    askName ? h("label",{class:"namefield"},[
+      h("span",{text:"ชื่อหรือชื่อเล่นของคุณ"}),
+      h("input",{id:"exam-name", type:"text", maxlength:"40", autocomplete:"nickname", value:getName(), placeholder:"เช่น ต้น ม.6/2"})
+    ]) : null,
+    askName ? h("p",{class:"muted",text:"ชื่อและคะแนนสอบจะถูกส่งให้ผู้ดูแลเว็บ เพื่อดูผลของผู้เข้าสอบ"}) : null,
+    S.nameErr ? h("p",{class:"err",text:"กรุณาใส่ชื่อก่อนเริ่มสอบ"}) : null,
     h("p",{text:"ต้องการจับเวลาหรือไม่"}),
     h("div",{class:"row"},[
-      h("button",{class:"btn",text:"จับเวลา " + Math.round(secs / 60) + " นาที",onclick:function(){ start(s, true); }}),
-      h("button",{class:"btn ghost",text:"ไม่จับเวลา",onclick:function(){ start(s, false); }})
+      h("button",{class:"btn",text:"จับเวลา " + Math.round(secs / 60) + " นาที",onclick:function(){ go(true); }}),
+      h("button",{class:"btn ghost",text:"ไม่จับเวลา",onclick:function(){ go(false); }})
     ]),
     s.exam ? h("p",{text:"ไม่เฉลยระหว่างทำ ย้อนกลับไปแก้คำตอบได้ กดส่งคำตอบเมื่อทำเสร็จ"}) : null,
     h("p",{class:"muted",text: s.full ? "เวลาเท่ากับสอบจริง หมดเวลาแล้วระบบส่งคำตอบให้ทันที ข้อที่ยังไม่ได้ทำนับเป็นผิด"
@@ -1480,6 +1500,16 @@ function saveHistory(){
     e.parts[p][1]++; if (S.answers[i] === it.a) e.parts[p][0]++;
   });
   var list = loadH(); list.push(e); saveH(list);
+  sendReport(e);
+}
+function sendReport(e){
+  /* ส่งผลสอบไปที่ Google Sheet ของผู้ดูแล (ตั้งค่าที่ report ใน config.json) */
+  if (!S.report || !/^https:\/\/script\.google\.com\//.test(S.report)) return;
+  var parts = {};
+  for (var p in e.parts) parts[p] = e.parts[p][0] + "/" + e.parts[p][1];
+  var body = {name:S.examName || getName() || "ไม่ระบุชื่อ", exam:EXAMKIND[e.kind] || e.kind, L:e.L, R:e.R, total:e.total,
+    timed:e.timed, blank:e.blank, parts:parts};
+  try { fetch(S.report, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(body)}).catch(function(){}); } catch(err){}
 }
 var EXAMKIND = {fullAll:"สอบเต็ม 200 ข้อ", fullListening:"Listening 100 ข้อ", fullReading:"Reading 100 ข้อ"};
 function fmtDate(t){
@@ -1841,6 +1871,7 @@ if (synth){ try { synth.getVoices(); synth.onvoiceschanged = function(){}; } cat
   function apply(c){
     S.access = c && c.open === false ? "closed" : "open";
     S.message = c && typeof c.message === "string" ? c.message : "";
+    S.report = c && typeof c.report === "string" ? c.report : "";
     render();
   }
   var done = false, timer = setTimeout(function(){ if (!done){ done = true; apply(null); } }, 6000);
